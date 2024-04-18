@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400&display=swap');
+
+body{ /*All text*/
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 18px;
+    margin: 0
+}
+
+header{
+
+   background-color: rgb(5 206 120);
+   padding: 0 15rem;
+   display: flex;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    margin: 1rem 1rem;
+}
+
+#headerLinks
+{
+    flex-grow: 2;
+    justify-self: flex-end;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 5px;
+}
+
+#headerImage
+{
+    max-height: 2rem;
+    align-self: center;
+}
+
+#mainSection
+{
+   background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/DemoIslands_1.png');
+
+    height: 95%;
+    background-color: black;
+}
