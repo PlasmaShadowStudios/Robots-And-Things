@@ -1,12 +1,10 @@
 import React, { FC } from 'react';
-import { HeaderWrapper } from './Header.styled';
 
-interface HeaderProps {}
 
-const Header: FC<HeaderProps> = () => (
- <HeaderWrapper>
+const Header = () => (
+ <header>
     Header Component
- </HeaderWrapper>
+ </header>
 );
 
 export default Header;
