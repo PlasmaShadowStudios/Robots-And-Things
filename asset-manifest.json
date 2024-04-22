@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/Robots-And-Things/static/css/main.1e38ed95.css",
-    "main.js": "/Robots-And-Things/static/js/main.056493a3.js",
+    "main.js": "/Robots-And-Things/static/js/main.f56cfc56.js",
     "static/js/453.07a44408.chunk.js": "/Robots-And-Things/static/js/453.07a44408.chunk.js",
     "static/media/DemoIslands_1.png": "/Robots-And-Things/static/media/DemoIslands_1.2a7b2094a7ca3b74acee.png",
     "static/media/Robots & Things Logo - Vector Version.png": "/Robots-And-Things/static/media/Robots & Things Logo - Vector Version.041a0b88b331d0c63fe7.png",
     "index.html": "/Robots-And-Things/index.html",
     "main.1e38ed95.css.map": "/Robots-And-Things/static/css/main.1e38ed95.css.map",
-    "main.056493a3.js.map": "/Robots-And-Things/static/js/main.056493a3.js.map",
+    "main.f56cfc56.js.map": "/Robots-And-Things/static/js/main.f56cfc56.js.map",
     "453.07a44408.chunk.js.map": "/Robots-And-Things/static/js/453.07a44408.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1e38ed95.css",
-    "static/js/main.056493a3.js"
+    "static/js/main.f56cfc56.js"
   ]
 }
