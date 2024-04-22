@@ -1,4 +1,5 @@
-import './Header.scss';
+import "./Header.scss";
+import { Link } from "react-router-dom";
 
 interface Props {
   headerLinks: string[];
@@ -7,7 +8,9 @@ interface Props {
 const Header = ({ headerLinks, headerNames }: Props) => (
   <header className="app-header">
     {headerLinks.map((headerLink, index) => (
-      <a href={headerLink}>{headerNames[index]}</a>
+      <Link to={headerLink}>
+        <p>{headerNames[index]}</p>
+      </Link>
     ))}
   </header>
 );
