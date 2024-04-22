@@ -5,7 +5,7 @@ export default {
   title: "Header",
 };
 
-export const Default = () => <Header />;
+export const Default = () => <Header headerLinks={['/about', 'test']} headerNames={['About', 'Test']} />;
 
 Default.story = {
   name: 'default',

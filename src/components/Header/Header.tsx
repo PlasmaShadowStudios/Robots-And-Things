@@ -1,10 +1,15 @@
-import React, { FC } from 'react';
+import './Header.scss';
 
-
-const Header = () => (
- <header>
-    Header Component
- </header>
+interface Props {
+  headerLinks: string[];
+  headerNames: string[];
+}
+const Header = ({ headerLinks, headerNames }: Props) => (
+  <header className="app-header">
+    {headerLinks.map((headerLink, index) => (
+      <a href={headerLink}>{headerNames[index]}</a>
+    ))}
+  </header>
 );
 
 export default Header;

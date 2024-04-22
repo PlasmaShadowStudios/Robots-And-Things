@@ -1,24 +1,40 @@
-import React from 'react';
-import demoIslandsImage from './images/DemoIslands_1.png';
-import VectorLogo from './images/Robots & Things Logo - Vector Version.png';
-import GameLogo from './images/Robots & Things Logo.png';
-import './App.scss';
+import React from "react";
+import "./App.scss";
+import Header from "./components/Header/Header";
+import {
+  BrowserRouter,
+  createBrowserRouter,
+  Route,
+  Router,
+  RouterProvider,
+  Routes,
+} from "react-router-dom";
+import VectorLogo from "./images/Robots & Things Logo - Vector Version.png";
+import About from "./components/page-components/About/About";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <About />,
+    errorElement: <p>404 Not Found</p>,
+  },
+  {
+    path: "/about",
+    element: <About />,
+    errorElement: <p>404 Not Found</p>,
+  },
+]);
 
 function App() {
   return (
     <div className="App">
       <title>Robots & Things - By Plasma Shadow Studios</title>
-      <header className="App-header">
-      <img src={VectorLogo} className="logo" alt="logo" />        
-
-      </header>
-
-      <img src={demoIslandsImage} className="screenshot" alt="logo" />
-
-      <p>
-          This site is under construction. Check back later.
-        </p>
-
+      <img src={VectorLogo} className="logo" alt="logo" />
+      <Header
+        headerLinks={["/about", "/updates", "/demo"]}
+        headerNames={["About", "Updates", "Demo"]}
+      />
+      <RouterProvider router={router} />
     </div>
   );
 }
