@@ -14,12 +14,12 @@ import About from "./components/page-components/About/About";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: `${process.env.BASE_URL}/`,
     element: <About />,
     errorElement: <p>404 Not Found</p>,
   },
   {
-    path: "/about",
+    path: `${process.env.BASE_URL}/about`,
     element: <About />,
     errorElement: <p>404 Not Found</p>,
   },
