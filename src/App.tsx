@@ -1,24 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
+import demoIslandsImage from './images/DemoIslands_1.png';
+import VectorLogo from './images/Robots & Things Logo - Vector Version.png';
+import GameLogo from './images/Robots & Things Logo.png';
 import './App.scss';
 
 function App() {
   return (
     <div className="App">
+      <title>Robots & Things - By Plasma Shadow Studios</title>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <img src={VectorLogo} className="logo" alt="logo" />        
+
       </header>
+
+      <img src={demoIslandsImage} className="screenshot" alt="logo" />
+
+      <p>
+          This site is under construction. Check back later.
+        </p>
+
     </div>
   );
 }
