@@ -1,12 +1,16 @@
 import GameLogo from "../../images/Robots & Things Logo.png";
-import './Page.scss';
+import Header from "../Header/Header";
+import "./Page.scss";
 
 const About = () => (
-  <div className="pageContainer">
-    <img src={GameLogo} className="screenshot" alt="logo" />
+  <>
+    <Header currentPage="About" />
+    <div className="pageContainer">
+      <img src={GameLogo} className="screenshot" alt="logo" />
 
-    <section>This site is under construction. Check back later.</section>
-  </div>
+      <section>This site is under construction. Check back later.</section>
+    </div>
+  </>
 );
 
 export default About;
