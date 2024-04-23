@@ -5,9 +5,30 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/DemoIslands_1.png');
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+section, iframe {
+  background-color: rgba(0.8, 0.8, 0.8, 0.6);
+  margin-left: 10rem;
+  margin-right: 10rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  color: white;
+  border-radius: 8px;
+  border: 2px solid white;
+}
+
+iframe
+{
+  border: 2px solid rgb(5 206 120);
 }

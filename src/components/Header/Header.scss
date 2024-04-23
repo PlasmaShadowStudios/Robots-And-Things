@@ -1,18 +1,25 @@
-body{ /*All text*/
-    font-family: "Josefin Sans", sans-serif;
-    font-size: 18px;
-    margin: 0
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 18px;
+  margin: 0;
 }
 
-header{
-
-   background-color: rgb(5 206 120);
-   padding: 0 15rem;
-   display: flex;
+header {
+  background-color: rgb(5 206 120);
+  padding: 0 15rem;
+  display: flex;
 }
 
 a {
-    color: white;
-    text-decoration: none;
-    margin: 1rem 1rem;
+  color: white;
+  text-decoration: none;
+  margin: 0.2rem 2rem;
+}
+
+.logo {
+  width: 10%;
+}
+
+.logo:hover {
+  cursor: pointer;
 }
