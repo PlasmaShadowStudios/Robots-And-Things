@@ -22,7 +22,7 @@ const Header = ({ currentPage = "" }: Props) => {
       />
       <div style={{ display: "flex" }}>
         {headerLinks.map((headerLink, index) => (
-          <Link to={`/${process.env.REACT_APP_BASE_URL}${headerLink}`}>
+          <Link to={`${headerLink}`}>
             <p className={currentPage === headerNames[index] ? "underline" : ""}>
               {headerNames[index]}
             </p>
