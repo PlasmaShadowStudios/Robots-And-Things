@@ -10,12 +10,12 @@ function App() {
     <div className="App">
       <title>Robots & Things - By Plasma Shadow Studios</title>
       <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/updates" element={<About />} />
-        <Route path="/screenshots" element={<About />} />
-        <Route path="/videos" element={<Videos />} />
-        <Route path="/demo" element={<About />} />
+        <Route path="/Robots-And-Things" element={<MainPage />} />
+        <Route path="/Robots-And-Things/about" element={<About />} />
+        <Route path="/Robots-And-Things/updates" element={<About />} />
+        <Route path="/Robots-And-Things/screenshots" element={<About />} />
+        <Route path="/Robots-And-Things/videos" element={<Videos />} />
+        <Route path="/Robots-And-Things/demo" element={<About />} />
       </Routes>
     </div>
   );
