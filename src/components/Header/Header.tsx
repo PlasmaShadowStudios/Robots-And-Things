@@ -15,14 +15,14 @@ const Header = ({ currentPage = "" }: Props) => {
       <img
         src={VectorLogo}
         onClick={() => {
-          window.location.href = `/${process.env.BASE_URL || ''}`;
+          window.location.replace(`${process.env.REACT_APP_BASE_URL}`);
         }}
         className="logo"
         alt="Robots & Things"
       />
       <div style={{ display: "flex" }}>
         {headerLinks.map((headerLink, index) => (
-          <Link to={`${process.env.BASE_URL || ''}${headerLink}`}>
+          <Link to={`${process.env.REACT_APP_BASE_URL}${headerLink}`}>
             <p className={currentPage === headerNames[index] ? "underline" : ""}>
               {headerNames[index]}
             </p>
