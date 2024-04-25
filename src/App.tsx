@@ -8,7 +8,7 @@ import Videos from "./components/page-components/Videos";
 function App() {
   return (
     <div className="App">
-      <title>Robots & Things - By Plasma Shadow Studios</title>
+      <title>Robots And Things - By Plasma Shadow Studios</title>
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/about" element={<About />} />
