@@ -8,6 +8,10 @@ header {
   background-color: rgb(5 206 120);
   padding: 0 15rem;
   display: flex;
+
+  .links {
+    display: flex;
+  }
 }
 
 a {
@@ -24,7 +28,34 @@ a {
   cursor: pointer;
 }
 
+.underline {
+  text-decoration: underline;
+}
 
-.underline{
-    text-decoration: underline;
+.mobileHeader {
+  display: none;
+}
+
+@media screen and (max-width: 640px) {
+  .mobileHeader {
+    display: block;
+    margin-left: -200px;
+  }
+
+  header {
+    max-width: 100%;
+    position: sticky;
+    .links {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo {
+      display: none;
+    }
+  }
+
+  .hideLinks {
+    display: none;
+  }
 }

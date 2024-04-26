@@ -1,8 +1,9 @@
 import "./Header.scss";
 import { Link } from "react-router-dom";
 import VectorLogo from "../../images/Robots & Things Logo - Vector Version.png";
+import { useState } from "react";
 
-const headerLinks = ["/about", "/updates", "/demo", "/screenshots", "/videos"];
+const headerLinks = ["/", "/updates", "/demo", "/screenshots", "/videos"];
 const headerNames = ["About", "Updates", "Demo", "Screenshots", "Videos"];
 
 interface Props {
@@ -10,8 +11,18 @@ interface Props {
 }
 
 const Header = ({ currentPage = "" }: Props) => {
+  const [showLinkMenu, setShowLinkMenu] = useState(true);
+
   return (
     <header className="app-header">
+      <button
+        className="mobileHeader"
+        onClick={() => {
+          setShowLinkMenu(!showLinkMenu);
+        }}
+      >
+        =
+      </button>
       <img
         src={VectorLogo}
         onClick={() => {
@@ -20,15 +31,25 @@ const Header = ({ currentPage = "" }: Props) => {
         className="logo"
         alt="Robots & Things"
       />
-      <div style={{ display: "flex" }}>
+
+      <div className={showLinkMenu ? "links" : "hideLinks"}>
         {headerLinks.map((headerLink, index) => (
           <Link to={`${headerLink}`}>
-            <p className={currentPage === headerNames[index] ? "underline" : ""}>
+            <p
+              className={currentPage === headerNames[index] ? "underline" : ""}
+            >
               {headerNames[index]}
             </p>
           </Link>
         ))}
       </div>
+      {!showLinkMenu && (
+        <div className={"links"}>
+          <a href={`/${currentPage}`}>
+            <p className="underline">{`${currentPage}`}</p>
+          </a>
+        </div>
+      )}
     </header>
   );
 };
