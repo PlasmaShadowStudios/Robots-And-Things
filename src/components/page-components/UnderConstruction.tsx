@@ -2,7 +2,7 @@ import GameLogo from "../../images/Robots & Things Logo.png";
 import Header from "../Header/Header";
 import "./Page.scss";
 
-const About = () => (
+const UnderConstruction = () => (
   <>
     <Header currentPage="About" />
     <div className="pageContainer">
@@ -13,4 +13,4 @@ const About = () => (
   </>
 );
 
-export default About;
+export default UnderConstruction;

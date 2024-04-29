@@ -35,6 +35,7 @@ section, iframe {
 iframe
 {
   border: 2px solid rgb(5 206 120);
+  padding: 0;
 }
 
 img:hover {
@@ -68,7 +69,7 @@ img {
 @media screen and (max-width: 640px) {
   iframe {
     margin: 0;
-    width: 75%;
+    width: 95%;
   }
 
   section {

@@ -4,6 +4,7 @@ body {
   margin: 0;
 }
 
+
 header {
   background-color: rgb(5 206 120);
   padding: 0 15rem;
@@ -36,20 +37,19 @@ a {
   text-decoration: underline;
 }
 
-.mobileHeader {
+.hamburgerButton {
   display: none !important;
 }
 
 @media screen and (max-width: 640px) {
-  .mobileHeader {
+  .hamburgerButton {
     display: block !important;
-    margin-left: -200px !important;
+    margin-left: -150px !important;
     color: rgb(18, 122, 18) !important;
   }
 
   header {
     max-width: 100%;
-    position: sticky;
     .links {
       display: flex;
       flex-direction: column;
@@ -58,6 +58,8 @@ a {
     .logo {
       display: none;
     }
+
+    padding: 0 10rem;
   }
 
   .hideLinks {
