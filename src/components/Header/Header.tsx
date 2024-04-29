@@ -2,6 +2,7 @@ import "./Header.scss";
 import { Link } from "react-router-dom";
 import VectorLogo from "../../images/Robots & Things Logo - Vector Version.png";
 import { useState } from "react";
+import PrimaryButton from "../Button/Button";
 
 const headerLinks = ["/", "/updates", "/demo", "/screenshots", "/videos"];
 const headerNames = ["About", "Updates", "Demo", "Screenshots", "Videos"];
@@ -15,14 +16,17 @@ const Header = ({ currentPage = "" }: Props) => {
 
   return (
     <header className="app-header">
-      <button
+      {/* <button
         className="mobileHeader"
         onClick={() => {
           setShowLinkMenu(!showLinkMenu);
         }}
       >
         =
-      </button>
+      </button> */}
+      <PrimaryButton className="mobileHeader" variant={'text'}  text="≡" onClick={() => {
+          setShowLinkMenu(!showLinkMenu);
+        }} />
       <img
         src={VectorLogo}
         onClick={() => {
@@ -45,9 +49,9 @@ const Header = ({ currentPage = "" }: Props) => {
       </div>
       {!showLinkMenu && (
         <div className={"links"}>
-          <a href={`/${currentPage}`}>
+          <div className="fakeLink">
             <p className="underline">{`${currentPage}`}</p>
-          </a>
+          </div>
         </div>
       )}
     </header>

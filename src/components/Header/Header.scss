@@ -20,6 +20,10 @@ a {
   margin: 0.2rem 2rem;
 }
 
+.fakeLink {
+  margin: 0.2rem 2rem;
+}
+
 .logo {
   width: 10%;
 }
@@ -33,13 +37,14 @@ a {
 }
 
 .mobileHeader {
-  display: none;
+  display: none !important;
 }
 
 @media screen and (max-width: 640px) {
   .mobileHeader {
-    display: block;
-    margin-left: -200px;
+    display: block !important;
+    margin-left: -200px !important;
+    color: rgb(18, 122, 18) !important;
   }
 
   header {

@@ -4,7 +4,7 @@ import "./Page.scss";
 
 const MainPage = () => (
   <>
-    <Header currentPage=""/>
+    <Header currentPage="About"/>
     <div className="pageContainer">
       <img src={GameLogo} className="screenshot" alt="logo" />
       <br />

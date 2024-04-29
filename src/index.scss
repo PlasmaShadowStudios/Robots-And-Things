@@ -70,4 +70,16 @@ img {
     margin: 0;
     width: 75%;
   }
+
+  section {
+    background-color: rgba(0.8, 0.8, 0.8, 0.6);
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    color: white;
+    border-radius: 8px;
+    border: 2px solid white;
+  }
 }
