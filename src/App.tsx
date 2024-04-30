@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import UnderConstruction from "./components/page-components/UnderConstruction";
 import MainPage from "./components/page-components/MainPage";
 import Videos from "./components/page-components/Videos";
+import DemoPage from "./components/page-components/DemoPage";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
         <Route path="/updates" element={<UnderConstruction />} />
         <Route path="/screenshots" element={<UnderConstruction />} />
         <Route path="/videos" element={<Videos />} />
-        <Route path="/demo" element={<UnderConstruction />} />
+        <Route path="/demo" element={<DemoPage />} />
       </Routes>
     </div>
   );
