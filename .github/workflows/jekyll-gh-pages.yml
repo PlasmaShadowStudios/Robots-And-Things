@@ -12,6 +12,7 @@ jobs:
   deploy:
     env:
         REACT_APP_BASE_URL: 'Robots-And-Things'
+        BOT: ${{ secrets.REACT_APP_BOT_TOKEN }}
     runs-on: ubuntu-latest
     steps:
     - id: build-publish
