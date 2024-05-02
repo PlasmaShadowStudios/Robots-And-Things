@@ -1,18 +1,29 @@
 {
   "files": {
-    "main.css": "/Robots-And-Things/static/css/main.792ef500.css",
-    "main.js": "/Robots-And-Things/static/js/main.1e2d31df.js",
+    "main.css": "/Robots-And-Things/static/css/main.134431b9.css",
+    "main.js": "/Robots-And-Things/static/js/main.4bed8133.js",
     "static/js/453.5e70d101.chunk.js": "/Robots-And-Things/static/js/453.5e70d101.chunk.js",
     "static/media/Robots & Things Logo.png": "/Robots-And-Things/static/media/Robots & Things Logo.4721fb35bc64334504ad.png",
     "static/media/DemoIslands_1.png": "/Robots-And-Things/static/media/DemoIslands_1.2a7b2094a7ca3b74acee.png",
     "static/media/Robots & Things Logo - Vector Version.png": "/Robots-And-Things/static/media/Robots & Things Logo - Vector Version.041a0b88b331d0c63fe7.png",
+    "static/media/T_Item_BowlingBall.png": "/Robots-And-Things/static/media/T_Item_BowlingBall.38c6cc03fcb82b64d97c.png",
+    "static/media/T_Gear.png": "/Robots-And-Things/static/media/T_Gear.bd5037a6d97f8b9c842a.png",
+    "static/media/T_Coupon_10_Off.png": "/Robots-And-Things/static/media/T_Coupon_10_Off.2f756861b86d4c86d169.png",
+    "static/media/T_Item_Rocket.png": "/Robots-And-Things/static/media/T_Item_Rocket.e8e3797fb6807e8caa9b.png",
+    "static/media/T_Paint_Blue.png": "/Robots-And-Things/static/media/T_Paint_Blue.bc696a03f6f7a9d6a0a4.png",
+    "static/media/T_Item_Speed.png": "/Robots-And-Things/static/media/T_Item_Speed.8dc74da0c16434432c6c.png",
+    "static/media/T_Costume07_Construction.png": "/Robots-And-Things/static/media/T_Costume07_Construction.0bc7cd68a6057bbf362d.png",
+    "static/media/T_Puzzle_Yellow.png": "/Robots-And-Things/static/media/T_Puzzle_Yellow.cf0ffbd98140dab61e97.png",
+    "static/media/Meter_3Cell_3.png": "/Robots-And-Things/static/media/Meter_3Cell_3.7e3ee51e1e070e915fea.png",
+    "static/media/T_Antenna03_TopHat_F.png": "/Robots-And-Things/static/media/T_Antenna03_TopHat_F.51d7c7487810012736e8.png",
+    "static/media/score_total.png": "/Robots-And-Things/static/media/score_total.c594482a7c8a81af1ed6.png",
     "index.html": "/Robots-And-Things/index.html",
-    "main.792ef500.css.map": "/Robots-And-Things/static/css/main.792ef500.css.map",
-    "main.1e2d31df.js.map": "/Robots-And-Things/static/js/main.1e2d31df.js.map",
+    "main.134431b9.css.map": "/Robots-And-Things/static/css/main.134431b9.css.map",
+    "main.4bed8133.js.map": "/Robots-And-Things/static/js/main.4bed8133.js.map",
     "453.5e70d101.chunk.js.map": "/Robots-And-Things/static/js/453.5e70d101.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.792ef500.css",
-    "static/js/main.1e2d31df.js"
+    "static/css/main.134431b9.css",
+    "static/js/main.4bed8133.js"
   ]
 }
