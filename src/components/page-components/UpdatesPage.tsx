@@ -6,7 +6,7 @@ export default function UpdatesPage() {
 
   useEffect(() => {
     async function getUpdatesFromDiscord() {
-      const url = "http://localhost:3000/updates";
+      const url = `${process.env.REACT_APP_API_URL}/updates`;
       const response = await fetch(url)
         .then((res) => {
           return res;
