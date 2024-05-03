@@ -2,31 +2,45 @@ import React, { useEffect, useState } from "react";
 import Header from "../Header/Header";
 
 export default function UpdatesPage() {
-  const [updateMessages] = useState<string[]>([]);
+  const [updateMessages, setUpdateMessages] = useState<any[]>([]);
 
   useEffect(() => {
-    const url =
-      "https://discord.com/api/v8/channels/736250834534400110/messages";
-    const headers = {
-      Authorization: `Bot ${process.env.bot}`, //client id 1235676186399477840
-    };
-    fetch(url, { headers })
-      .then((res) => {
-        console.log(res);
-        // setUpdateMessages(res.body);
-      })
-      .catch((e) => {
-        console.warn(e);
-      });
+    async function getUpdatesFromDiscord() {
+      const url = "http://localhost:3000/updates";
+      const response = await fetch(url)
+        .then((res) => {
+          return res;
+        })
+        .catch((e) => {
+          console.warn(e);
+        });
+
+      if (response) {
+        const result = await response.json();
+        setUpdateMessages([...result]);
+        console.log("res", result);
+      }
+    }
+    getUpdatesFromDiscord();
   }, []);
 
   return (
     <>
       <Header currentPage="Updates" />
       <h1>Updates</h1>
-      <section>(Under construction)</section>
+      <section>
+        <a href="https://discord.gg/Hu9TPDYR" style={{color:"aqua"}}>
+          This page gets messages from updates in our discord channel.
+        </a>
+        It's still a work in progress.
+      </section>
       {updateMessages.map((msg, index) => (
-        <p>{msg}</p>
+        <section>
+          <i>{msg.timestamp.split("T")[0]}</i>
+          <br />
+          <br />
+          {msg.content}
+        </section>
       ))}
     </>
   );
