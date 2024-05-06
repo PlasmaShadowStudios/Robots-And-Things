@@ -1,0 +1,37 @@
+.pageContainer {
+  text-align: center;
+  font-family: "Josefin Sans", sans-serif;
+
+
+  .screenshot {
+    margin-top: 8px;
+    width: 20rem;
+  }
+
+  h1 {
+    color: white;
+    margin-top: 4rem;
+    margin-bottom: 0;
+  }
+
+  ul {
+    text-align: left;
+    margin: 0 20rem;
+  }
+
+  .demoDownloads {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    button {
+      margin-top: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    ul {
+      margin: 0 1rem;
+    }
+  }
+}

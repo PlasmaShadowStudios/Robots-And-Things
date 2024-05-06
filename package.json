@@ -1,78 +1,28 @@
 {
-  "name": "plasma-shadow-studios-site",
+  "name": "robots-and-things-site",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://plasmashadowstudios.github.io/Robots-And-Things",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
-    "@mui/material": "^5.15.15",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.96",
-    "@types/react": "^18.2.79",
-    "@types/react-dom": "^18.2.25",
-    "eslint": "^8.57.0",
-    "gh-pages": "^6.1.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router": "^6.22.3",
-    "react-router-dom": "^6.22.3",
-    "react-scripts": "5.0.1",
-    "sass": "^1.75.0",
-    "stories-react": "^1.1.2",
-    "typescript": "^4.9.5",
-    "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "lint": "eslint src/**/*.ts src/**/*.tsx"
-
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest",
-      "plugin:storybook/recommended"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "@mui/material": "^5.15.16",
+    "next": "14.2.3",
+    "react": "^18",
+    "react-dom": "^18",
+    "sass": "^1.75.0"
   },
   "devDependencies": {
-    "@chromatic-com/storybook": "^1.3.3",
-    "@storybook/addon-essentials": "^8.0.9",
-    "@storybook/addon-interactions": "^8.0.9",
-    "@storybook/addon-links": "^8.0.9",
-    "@storybook/addon-onboarding": "^8.0.9",
-    "@storybook/blocks": "^8.0.9",
-    "@storybook/preset-create-react-app": "^8.0.9",
-    "@storybook/react": "^8.0.9",
-    "@storybook/react-webpack5": "^8.0.9",
-    "@storybook/test": "^8.0.9",
-    "eslint-plugin-react": "^7.34.1",
-    "eslint-plugin-storybook": "^0.8.0",
-    "install": "^0.13.0",
-    "prop-types": "^15.8.1",
-    "storybook": "^8.0.9",
-    "webpack": "^5.91.0"
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3",
+    "typescript": "^5"
   }
 }

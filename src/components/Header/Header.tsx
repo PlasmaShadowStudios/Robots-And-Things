@@ -1,5 +1,5 @@
-import "./Header.scss";
-import { Link } from "react-router-dom";
+"use client";
+import styles from "./Header.module.scss";
 import GameLogo from "../../images/Robots & Things Logo.png";
 
 import { useState } from "react";
@@ -14,50 +14,54 @@ interface Props {
 }
 
 const Header = ({ currentPage = "" }: Props) => {
-
-
   // Hide link menu if not on mobile
-  const [showLinkMenu, setShowLinkMenu] = useState(!useIsMobile(window.innerWidth));
-
+  const [showLinkMenu, setShowLinkMenu] = useState(
+    true
+    //!useIsMobile(global.window && window.innerWidth)
+  );
 
   return (
-    <header className="app-header">
-      <PrimaryButton
-        className="hamburgerButton"
-        variant={"text"}
-        text="≡"
-        onClick={() => {
-          setShowLinkMenu(!showLinkMenu);
-        }}
-      />
-      <img
-        src={GameLogo}
-        onClick={() => {
-          window.location.replace(`/${process.env.REACT_APP_BASE_URL}`);
-        }}
-        className="logo"
-        alt="Robots & Things"
-      />
+    <div className={styles.appHeader}>
+      <header>
+        <PrimaryButton
+          className={styles.hamburgerButton}
+          variant={"text"}
+          text="≡"
+          onClick={() => {
+            setShowLinkMenu(!showLinkMenu);
+          }}
+        />
+        <img
+          src={GameLogo}
+          onClick={() => {
+            window.location.replace(`/${process.env.REACT_APP_BASE_URL}`);
+          }}
+          className={styles.logo}
+          alt="Robots & Things"
+        />
 
-      <div className={showLinkMenu ? "links" : "hideLinks"}>
-        {headerLinks.map((headerLink, index) => (
-          <Link to={`${headerLink}`}>
-            <p
-              className={currentPage === headerNames[index] ? "underline" : ""}
-            >
-              {headerNames[index]}
-            </p>
-          </Link>
-        ))}
-      </div>
-      {!showLinkMenu && (
-        <div className={"links"}>
-          <div className="fakeLink">
-            <p className="underline">{`${currentPage}`}</p>
-          </div>
+        <div className={showLinkMenu ? styles.links : styles.hideLinks}>
+          {headerLinks.map((headerLink, index) => (
+            <a href={`${headerLink}`} key={headerLink}>
+              <p
+                className={
+                  currentPage === headerNames[index] ? styles.underline : ""
+                }
+              >
+                {headerNames[index]}
+              </p>
+            </a>
+          ))}
         </div>
-      )}
-    </header>
+        {!showLinkMenu && (
+          <div className={styles.links}>
+            <div className={styles.fakeLinks}>
+              <p className={styles.underline}>{`${currentPage}`}</p>
+            </div>
+          </div>
+        )}
+      </header>
+    </div>
   );
 };
 

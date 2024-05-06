@@ -1,5 +1,5 @@
 import Header from "../Header/Header";
-import "./Page.scss";
+import "./Page.module.scss";
 
 const Videos = () => (
   <>

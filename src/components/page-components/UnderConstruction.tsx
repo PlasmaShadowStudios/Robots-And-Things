@@ -1,6 +1,6 @@
 import GameLogo from "../../images/Robots & Things Logo.png";
 import Header from "../Header/Header";
-import "./Page.scss";
+import "./Page.module.scss";
 
 const UnderConstruction = () => (
   <>

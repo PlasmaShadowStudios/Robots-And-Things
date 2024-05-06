@@ -1,24 +1,26 @@
+"use client";
 import GameLogo from "../../images/Robots & Things Logo.png";
 import PrimaryButton from "../Button/Button";
 import Header from "../Header/Header";
-import "./Page.scss";
+import styles from "./Page.module.scss";
 
-const UnderConstruction = () => (
+const DemoPage = () => (
   <>
     <Header currentPage="Demo" />
-    <div className="pageContainer">
+    <div className={styles.pageContainer}>
       <img src={GameLogo} className="screenshot" alt="logo" />
 
       <section>
         <b>Robots & Things</b> is 3D Collect-a-thon Platformer that blends
         exploring big interconnected worlds with challenging action levels, all
         loaded with secrets and silly characters to meet. We were inspired by
-        particular games like Super Mario Sunshine and Super Metroid, as well as series like Crash Bandicoot, Sonic, and Banjo-Kazooie.
+        particular games like Super Mario Sunshine and Super Metroid, as well as
+        series like Crash Bandicoot, Sonic, and Banjo-Kazooie.
         <br />
         <br />
         <br />
         <br />
-        We're bringing together the best elements of past games, along with
+        We&apos;re bringing together the best elements of past games, along with
         fresh new ideas like the <b>move meter</b> and{" "}
         <b>score progression system</b>.
         <br />
@@ -59,4 +61,4 @@ const UnderConstruction = () => (
   </>
 );
 
-export default UnderConstruction;
+export default DemoPage;

@@ -1,0 +1,67 @@
+.appHeader {
+
+  header {
+    background-color: rgb(5 206 120);
+    padding: 0 15rem;
+    display: flex;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 18px;
+    margin: 0;
+    
+    .links {
+      display: flex;
+    }
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    margin: 0.2rem 2rem;
+  }
+
+  .fakeLink {
+    margin: 0.2rem 2rem;
+  }
+
+  .logo {
+    width: 10%;
+  }
+
+  .logo:hover {
+    cursor: pointer;
+  }
+
+  .underline {
+    text-decoration: underline;
+  }
+
+  .hamburgerButton {
+    display: none !important;
+  }
+
+  @media screen and (max-width: 640px) {
+    .hamburgerButton {
+      display: block !important;
+      margin-left: -150px !important;
+      color: rgb(18, 122, 18) !important;
+    }
+
+    header {
+      max-width: 100%;
+      .links {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .logo {
+        display: none;
+      }
+
+      padding: 0 10rem;
+    }
+
+    .hideLinks {
+      display: none;
+    }
+  }
+}

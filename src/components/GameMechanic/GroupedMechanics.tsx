@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import "./GameMechanic.scss";
+import styles from "./GroupedMechanics.module.scss";
 
 export enum GroupColour {
   WHITE = "white",
@@ -16,10 +16,8 @@ interface Props {
 }
 
 export const GroupedMechanics = ({ heading, color, children }: Props) => (
-  <>
+  <div className={styles.groupedMechanics}>
     <h1 style={{ backgroundColor: color }}>{heading}</h1>
-    <section style={{ borderColor: color }} className={`groupedMechanics`}>
-      {children}
-    </section>
-  </>
+    <section style={{ borderColor: color }}>{children}</section>
+  </div>
 );

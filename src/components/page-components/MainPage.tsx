@@ -14,7 +14,7 @@ import BowlingBall from "../../images/icons/T_Item_BowlingBall.png";
 import Speed from "../../images/icons/T_Item_Speed.png";
 
 import Header from "../Header/Header";
-import "./Page.scss";
+import styles from "./Page.module.scss";
 import GameMechanic from "../GameMechanic/GameMechanic";
 import {
   GroupedMechanics,
@@ -24,7 +24,7 @@ import {
 const MainPage = () => (
   <>
     <Header currentPage="About" />
-    <div className="pageContainer">
+    <div className={styles.pageContainer}>
       <img src={VectorLogo} className="screenshot" alt="logo" />
       <br />
 

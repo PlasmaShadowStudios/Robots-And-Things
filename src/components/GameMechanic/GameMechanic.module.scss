@@ -1,0 +1,28 @@
+.gameMechanic {
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: start;
+
+  font-family: "Josefin Sans", sans-serif;
+  margin-left: 10rem;
+  margin-right: 10rem;
+  
+
+
+  .mechanicText {
+    width: 80%;
+  }
+
+  img {
+    margin-right: 4px;
+  }
+
+  @media screen and (max-width: 640px) {
+    h1 {
+      font-size: 16pt;
+    }
+  }
+}
