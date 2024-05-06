@@ -1,14 +1,22 @@
 "use client";
+import Image from "next/image";
 import GameLogo from "../../images/Robots & Things Logo.png";
 import PrimaryButton from "../Button/Button";
 import Header from "../Header/Header";
 import styles from "./Page.module.scss";
+import DemoButtons from "../DemoButtons/DemoButtons";
 
 const DemoPage = () => (
   <>
     <Header currentPage="Demo" />
     <div className={styles.pageContainer}>
-      <img src={GameLogo} className="screenshot" alt="logo" />
+      <Image
+        src={GameLogo}
+        quality={100}
+        className={styles.screenshot}
+        alt="logo"
+      />
+      <h1>Demo</h1>
 
       <section>
         <b>Robots & Things</b> is 3D Collect-a-thon Platformer that blends
@@ -41,21 +49,7 @@ const DemoPage = () => (
         Click below to get it on MediaFire!
         <br />
         <br />
-        <div className="demoDownloads">
-          <PrimaryButton
-            text={"Download SAGE 2021 Demo"}
-            onClick={() =>
-              window.location.replace(
-                "https://www.mediafire.com/file/1wyb4cyfo6zon3q/8xjv74b83i_Robots_Things_SAGE_Demo.zip"
-              )
-            }
-          />
-          <PrimaryButton
-            text={"Coming Soon? 2024 Demo"}
-            variant={"outlined"}
-            onClick={() => {}} //window.location.replace("")}
-          />
-        </div>
+        <DemoButtons />
       </section>
     </div>
   </>

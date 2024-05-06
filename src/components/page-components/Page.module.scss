@@ -5,7 +5,8 @@
 
   .screenshot {
     margin-top: 8px;
-    width: 20rem;
+    width: 20%;
+    height: 20%;
   }
 
   h1 {
@@ -19,19 +20,13 @@
     margin: 0 20rem;
   }
 
-  .demoDownloads {
-    margin: 1rem;
-    display: flex;
-    flex-direction: column;
-
-    button {
-      margin-top: 1rem;
-    }
-  }
-
   @media screen and (max-width: 640px) {
     ul {
       margin: 0 1rem;
+    }
+
+    .screenshot {
+      width: 100%;
     }
   }
 }

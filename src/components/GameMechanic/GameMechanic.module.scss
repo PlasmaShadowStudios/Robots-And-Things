@@ -7,8 +7,8 @@
   justify-content: start;
 
   font-family: "Josefin Sans", sans-serif;
-  margin-left: 10rem;
-  margin-right: 10rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
   
 
 
@@ -21,8 +21,7 @@
   }
 
   @media screen and (max-width: 640px) {
-    h1 {
-      font-size: 16pt;
-    }
+    margin-left: 0;
+    margin-right: 0;
   }
 }

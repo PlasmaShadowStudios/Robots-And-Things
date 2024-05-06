@@ -6,8 +6,6 @@ const UnderConstruction = () => (
   <>
     <Header currentPage="About" />
     <div className="pageContainer">
-      <img src={GameLogo} className="screenshot" alt="logo" />
-
       <section>This site is under construction. Check back later.</section>
     </div>
   </>

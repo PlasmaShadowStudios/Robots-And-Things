@@ -1,6 +1,7 @@
 "use client";
 import styles from "./Header.module.scss";
 import GameLogo from "../../images/Robots & Things Logo.png";
+import Image from "next/image";
 
 import { useState } from "react";
 import PrimaryButton from "../Button/Button";
@@ -31,8 +32,10 @@ const Header = ({ currentPage = "" }: Props) => {
             setShowLinkMenu(!showLinkMenu);
           }}
         />
-        <img
+        <Image
           src={GameLogo}
+          quality={100}
+          width={96}
           onClick={() => {
             window.location.replace(`/${process.env.REACT_APP_BASE_URL}`);
           }}

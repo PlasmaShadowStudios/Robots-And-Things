@@ -24,4 +24,10 @@
   section {
     margin-top: 0;
   }
+
+  @media screen and (max-width: 640px) {
+    h1 {
+      font-size: 16pt;
+    }
+  }
 }

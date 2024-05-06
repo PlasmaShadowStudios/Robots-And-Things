@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import VectorLogo from "../../images/Robots & Things Logo - Vector Version.png";
 import PuzzlePiece from "../../images/icons/T_Puzzle_Yellow.png";
 import Gear from "../../images/icons/T_Gear.png";
@@ -25,7 +26,7 @@ const MainPage = () => (
   <>
     <Header currentPage="About" />
     <div className={styles.pageContainer}>
-      <img src={VectorLogo} className="screenshot" alt="logo" />
+      <Image src={VectorLogo} className={styles.screenshot} alt="logo"  quality={100 }/>
       <br />
 
       <iframe
@@ -106,7 +107,7 @@ const MainPage = () => (
         <GameMechanic
           src={Costume}
           alt="Costume"
-          text="Use coins to buy costumes for the Blockbot in shops!"
+          text="Use coins to buy costumes for the Blockbot in shops! Some NPCs might reward you for wearing certain things!"
         />
         <GameMechanic
           src={PaintBucket}
