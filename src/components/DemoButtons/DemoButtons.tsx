@@ -1,3 +1,4 @@
+'use client';
 import * as React from "react";
 import PrimaryButton from "../Button/Button";
 import styles from './DemoButtons.module.scss';

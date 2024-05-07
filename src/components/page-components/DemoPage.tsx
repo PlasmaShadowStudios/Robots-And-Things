@@ -1,7 +1,7 @@
-"use client";
 import Image from "next/image";
 import GameLogo from "../../images/Robots & Things Logo.png";
-import PrimaryButton from "../Button/Button";
+import Thumbnail from "../../images/500x500_Thumbnail.png";
+
 import Header from "../Header/Header";
 import styles from "./Page.module.scss";
 import DemoButtons from "../DemoButtons/DemoButtons";
@@ -11,10 +11,10 @@ const DemoPage = () => (
     <Header currentPage="Demo" />
     <div className={styles.pageContainer}>
       <Image
-        src={GameLogo}
+        src={Thumbnail}
         quality={100}
         className={styles.screenshot}
-        alt="logo"
+        alt="Robots & Things"
       />
       <h1>Demo</h1>
 

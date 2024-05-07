@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useState } from "react";
 import PrimaryButton from "../Button/Button";
 import useIsMobile from "./useIsMobile";
+import Link from "next/link";
 
 const headerLinks = ["/", "/updates", "/demo", "/screenshots", "/videos"];
 const headerNames = ["About", "Updates", "Demo", "Screenshots", "Videos"];
@@ -17,8 +18,7 @@ interface Props {
 const Header = ({ currentPage = "" }: Props) => {
   // Hide link menu if not on mobile
   const [showLinkMenu, setShowLinkMenu] = useState(
-    true
-    //!useIsMobile(global.window && window.innerWidth)
+    !useIsMobile(global.window && window.innerWidth)
   );
 
   return (
@@ -35,30 +35,30 @@ const Header = ({ currentPage = "" }: Props) => {
         <Image
           src={GameLogo}
           quality={100}
-          width={96}
           onClick={() => {
             window.location.replace(`/${process.env.REACT_APP_BASE_URL}`);
           }}
           className={styles.logo}
           alt="Robots & Things"
         />
-
         <div className={showLinkMenu ? styles.links : styles.hideLinks}>
           {headerLinks.map((headerLink, index) => (
-            <a href={`${headerLink}`} key={headerLink}>
-              <p
-                className={
-                  currentPage === headerNames[index] ? styles.underline : ""
-                }
-              >
-                {headerNames[index]}
-              </p>
-            </a>
+            <Link
+              href={`${headerLink}`}
+              key={headerLink}
+              className={
+                currentPage === headerNames[index]
+                  ? styles.underline
+                  : styles.link
+              }
+            >
+              {headerNames[index]}
+            </Link>
           ))}
         </div>
         {!showLinkMenu && (
           <div className={styles.links}>
-            <div className={styles.fakeLinks}>
+            <div className={styles.currentPageLink}>
               <p className={styles.underline}>{`${currentPage}`}</p>
             </div>
           </div>

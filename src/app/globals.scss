@@ -80,7 +80,7 @@ a:hover {
 
 
 section, iframe {
-  background-color: rgba(0.8, 0.8, 0.8, 0.6);
+  background-color: rgba(0.8, 0.8, 0.8, 0.7) !important;
   margin-left: 10rem;
   margin-right: 10rem;
   margin-top: 1rem;
@@ -144,7 +144,7 @@ img {
   }
 
   section {
-    background-color: rgba(0.8, 0.8, 0.8, 0.6);
+    background-color: rgba(0.8, 0.8, 0.8, 0.7);
     margin-left: 1rem;
     margin-right: 1rem;
     margin-top: 1rem;
@@ -178,18 +178,6 @@ a:hover {
 }
 
 
-section, iframe {
-  background-color: rgba(0.8, 0.8, 0.8, 0.6);
-  margin-left: 10rem;
-  margin-right: 10rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  color: white;
-  border-radius: 8px;
-  border: 2px solid white;
-}
-
 iframe
 {
   border: 2px solid rgb(5 206 120);
@@ -232,25 +220,5 @@ img {
   }
   from {
     transform: scale(1);
-  }
-}
-
-
-@media screen and (max-width: 640px) {
-  iframe {
-    margin: 0;
-    width: 95%;
-  }
-
-  section {
-    background-color: rgba(0.8, 0.8, 0.8, 0.6);
-    margin-left: 1rem;
-    margin-right: 1rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    padding: 1rem;
-    color: white;
-    border-radius: 8px;
-    border: 2px solid white;
   }
 }
