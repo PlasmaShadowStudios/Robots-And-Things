@@ -1,7 +1,7 @@
 import Header from "../Header/Header";
 import "./Page.module.scss";
 
-const Videos = () => (
+const VideosPage = () => (
   <>
     <Header currentPage="Videos" />
     <div className="pageContainer">
@@ -56,4 +56,4 @@ const Videos = () => (
   </>
 );
 
-export default Videos;
+export default VideosPage;
