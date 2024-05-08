@@ -1,9 +1,9 @@
 import React from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import styles from "./GameMechanic.module.scss";
 
 interface Props {
-  src: string;
+  src: StaticImageData;
   alt: string;
   text: string;
 }
