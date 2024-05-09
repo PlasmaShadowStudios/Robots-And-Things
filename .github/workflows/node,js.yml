@@ -9,6 +9,9 @@ on:
 
 jobs:
   build:
+    env:
+        REACT_APP_BASE_URL: 'Robots-And-Things'
+        REACT_APP_API_URL: ${{ secrets.REACT_APP_API_URL }}
     runs-on: ubuntu-latest
 
     steps:
