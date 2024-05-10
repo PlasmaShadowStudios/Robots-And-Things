@@ -30,14 +30,16 @@ async function getUpdates() {
 export default async function Updates() {
   const updates = await getUpdates();
 
-  //Format messages to not show emojis, hide pointless small update messages, and show videos/images properly
-  updates.forEach((msg: any) => {
-    if (isValidMessage(msg.content)) {
-      msg.content = removeEmojiSymbolsAndPings(msg.content);
-    } else {
-      msg.content = "";
-    }
-  });
+  if (updates) {
+    //Format messages to not show emojis, hide pointless small update messages, and show videos/images properly
+    updates.forEach((msg: any) => {
+      if (isValidMessage(msg.content)) {
+        msg.content = removeEmojiSymbolsAndPings(msg.content);
+      } else {
+        msg.content = "";
+      }
+    });
+  }
 
   return (
     <>
