@@ -36,7 +36,7 @@ const Header = ({ currentPage = "" }: Props) => {
           src={GameLogo}
           quality={100}
           onClick={() => {
-            window.location.replace(`/${process.env.REACT_APP_BASE_URL}`);
+            window.location.replace(`${process.env.NEXT_PUBLIC_BASE_URL}`);
           }}
           className={styles.logo}
           alt="Robots & Things"
@@ -44,7 +44,7 @@ const Header = ({ currentPage = "" }: Props) => {
         <div className={showLinkMenu ? styles.links : styles.hideLinks}>
           {headerLinks.map((headerLink, index) => (
             <Link
-              href={`${headerLink}`}
+              href={`${process.env.NEXT_PUBLIC_BASE_URL || ''}${headerLink}`}
               key={headerLink}
               className={
                 currentPage === headerNames[index]
