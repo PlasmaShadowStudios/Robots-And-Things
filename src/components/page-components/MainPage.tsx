@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/image";
 import VectorLogo from "../../images/Robots & Things Logo - Vector Version.png";
 import PuzzlePiece from "../../images/icons/T_Puzzle_Yellow.png";
 import Gear from "../../images/icons/T_Gear.png";
@@ -17,16 +17,24 @@ import Speed from "../../images/icons/T_Item_Speed.png";
 import Header from "../Header/Header";
 import styles from "./Page.module.scss";
 import GameMechanic from "../GameMechanic/GameMechanic";
+
 import {
   GroupedMechanics,
   GroupColour,
 } from "../GameMechanic/GroupedMechanics";
+import PageBackground from "./PageBackground";
 
 const MainPage = () => (
   <>
     <Header currentPage="About" />
     <div className={styles.pageContainer}>
-      <Image src={VectorLogo} className={styles.screenshot} alt="logo"  quality={100 }/>
+      <Image
+        src={VectorLogo}
+        className={styles.screenshot}
+        alt="logo"
+        quality={100}
+      />
+      <PageBackground />
       <br />
 
       <iframe

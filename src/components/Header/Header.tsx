@@ -21,6 +21,8 @@ const Header = ({ currentPage = "" }: Props) => {
     !useIsMobile(global.window && window.innerWidth)
   );
 
+  console.log("base url: ", process.env.NEXT_PUBLIC_BASE_URL);
+
   return (
     <div className={styles.appHeader}>
       <header>

@@ -13,7 +13,7 @@
 body{ /*All text*/
     font-family: "Josefin Sans", sans-serif;
     font-size: 18px;
-    margin: 0
+    margin: 0;
 }
 
 header{
@@ -51,7 +51,7 @@ p {
 
 #mainSection
 {
-   background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../images/DemoIslands_1.png');
+   background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) );
 
     height: 95%;
     background-color: black;
@@ -65,7 +65,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../images/DemoIslands_1.png');
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) );;
 
 }
 
@@ -164,7 +164,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../images/DemoIslands_1.png');
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) );;
 
 }
 

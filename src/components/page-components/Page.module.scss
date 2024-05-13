@@ -1,13 +1,32 @@
 .pageContainer {
   text-align: center;
   font-family: "Josefin Sans", sans-serif;
-  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../../images/DemoIslands_1.png');
-
-
+  //background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   .screenshot {
     margin-top: 8px;
     width: 20%;
     height: 20%;
+  }
+  padding-bottom: 1rem;
+
+  .bg {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    div {
+      background-color: rgb(178, 184, 202);
+    }
+    filter: brightness(0.5);
+  }
+  .bgImg {
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgb(181, 200, 255);
   }
 
   h1 {
