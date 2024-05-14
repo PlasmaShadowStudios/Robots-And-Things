@@ -6,7 +6,8 @@ import {
 
 // Get updates from the game's #updates channel in discord
 async function getUpdates() {
-  const url = `${process.env.NEXT_PUBLIC_API_URL}/updates`;
+  //const url = `${process.env.NEXT_PUBLIC_API_URL}/updates`;
+  const url = 'https://robots-and-things-335q.onrender.com/updates';
   console.log("fetching from", url);
   const response = await fetch(url)
     .then((res) => {

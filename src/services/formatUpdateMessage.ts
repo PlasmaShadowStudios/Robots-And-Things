@@ -17,7 +17,10 @@ export function removeEmojiSymbolsAndPings(msg: string) {
   msg = msg.replaceAll("<@&842222470571884564>", "");
   msg = msg.replaceAll("<@&850183191973199898>", "");
   msg = msg.replaceAll("<@&842221614081900615>", "");
+  msg = msg.replaceAll("<:Speed:847197094946406470>", "");
+
   msg = msg.replaceAll("<:Stare:848779441165041674>", "🟨");
+  msg = msg.replaceAll("<:DKSad:847197727661883392>", ":(");
 
   return msg;
 }

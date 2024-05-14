@@ -3,9 +3,9 @@ import styles from "./Header.module.scss";
 import GameLogo from "../../images/Robots & Things Logo.png";
 import Image from "next/image";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PrimaryButton from "../Button/Button";
-import useIsMobile from "./useIsMobile";
+import useIsMobile from "../../services/useIsMobile";
 import Link from "next/link";
 
 const headerLinks = ["/", "/updates", "/demo", "/screenshots", "/videos"];
@@ -21,7 +21,10 @@ const Header = ({ currentPage = "" }: Props) => {
     !useIsMobile(global.window && window.innerWidth)
   );
 
-  console.log("base url: ", process.env.NEXT_PUBLIC_BASE_URL);
+  //Env variable not working, so try this for different links in production
+  const [isInDevMode] = useState(
+    !!process && process.env.NODE_ENV === "development"
+  );
 
   return (
     <div className={styles.appHeader}>
@@ -36,9 +39,11 @@ const Header = ({ currentPage = "" }: Props) => {
         />
         <Image
           src={GameLogo}
-          quality={100}
           onClick={() => {
-            window.location.replace(`${process.env.NEXT_PUBLIC_BASE_URL}`);
+            //window.location.replace(`${process.env.NEXT_PUBLIC_BASE_URL}`);
+            window.location.replace(
+              `${isInDevMode ? "localhost:3000" : "https://plasmashadowstudios.github.io/Robots-And-Things"}`
+            );
           }}
           className={styles.logo}
           alt="Robots & Things"
@@ -46,7 +51,8 @@ const Header = ({ currentPage = "" }: Props) => {
         <div className={showLinkMenu ? styles.links : styles.hideLinks}>
           {headerLinks.map((headerLink, index) => (
             <Link
-              href={`${process.env.NEXT_PUBLIC_BASE_URL || ''}${headerLink}`}
+              //href={`${process.env.NEXT_PUBLIC_BASE_URL || ''}${headerLink}`}
+              href={`${isInDevMode ? "" : "Robots-And-Things"}${headerLink}`}
               key={headerLink}
               className={
                 currentPage === headerNames[index]
