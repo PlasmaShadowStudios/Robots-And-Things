@@ -30,6 +30,15 @@
     animation: none;
   }
 
+  .inlineLink {
+    margin-left: 6px;
+    color: aqua;
+  }
+
+  .inlineLink:hover{
+    color: rgb(3, 146, 146);
+  }
+
   h1 {
     color: white;
     margin-top: 4rem;

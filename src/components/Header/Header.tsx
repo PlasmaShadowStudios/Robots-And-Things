@@ -51,8 +51,7 @@ const Header = ({ currentPage = "" }: Props) => {
         <div className={showLinkMenu ? styles.links : styles.hideLinks}>
           {headerLinks.map((headerLink, index) => (
             <Link
-              //href={`${process.env.NEXT_PUBLIC_BASE_URL || ''}${headerLink}`}
-              href={`${isInDevMode ? "" : "Robots-And-Things"}${headerLink}`}
+              href={`${headerLink}`}
               key={headerLink}
               className={
                 currentPage === headerNames[index]

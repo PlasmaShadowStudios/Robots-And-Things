@@ -17,8 +17,12 @@ export default function UpdatesPage({ updateMessages }: Props) {
         {updateMessages ? (
           <>
             <section>
-              <a href="https://discord.gg/Hu9TPDYR" style={{ color: "aqua" }}>
-                This page gets messages from updates in our discord channel.
+              This page gets messages from updates in our
+              <a
+                className={styles.inlineLink}
+                href="https://discord.gg/Hu9TPDYR"
+              >
+                discord server.
               </a>
             </section>
             {updateMessages.map((msg, index) => (

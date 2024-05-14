@@ -8,7 +8,8 @@ const nextConfig = {
     path: "",
     unoptimized: true,
   },
-  assetPrefix: "./",
+  assetPrefix: "/Robots-And-Things",
+  basePath: '/Robots-And-Things',
 };
 
 export default nextConfig;
