@@ -17,7 +17,7 @@ interface Props {
 
 export const GroupedMechanics = ({ heading, color, children }: Props) => (
   <div className={styles.groupedMechanics}>
-    <h1 style={{ backgroundColor: color }}>{heading}</h1>
+    <h2 style={{ backgroundColor: color }}>{heading}</h2>
     <section style={{ borderColor: color }}>{children}</section>
   </div>
 );

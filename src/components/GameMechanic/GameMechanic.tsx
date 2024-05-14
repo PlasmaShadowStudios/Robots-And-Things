@@ -10,7 +10,7 @@ interface Props {
 
 const GameMechanic = ({ src, alt, text }: Props) => (
   <div className={styles.gameMechanic}>
-    <Image src={src} alt={alt} width={64} quality={100} unoptimized />
+    <Image src={src} alt={alt} width={64} quality={100} title={alt} />
     <p className={styles.mechanicText}>{text}</p>
   </div>
 );

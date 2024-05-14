@@ -9,6 +9,11 @@
   }
   padding-bottom: 1rem;
 
+  h1 {
+    text-decoration: underline;
+    margin-top: 4px !important;
+  }
+
   .bg {
     display: flex;
     flex-direction: column;

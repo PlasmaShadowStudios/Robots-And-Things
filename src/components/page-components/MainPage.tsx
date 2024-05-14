@@ -33,6 +33,7 @@ const MainPage = () => (
         className={styles.screenshot}
         alt="logo"
         quality={100}
+        title="Robots & Things Logo"
       />
       <PageBackground />
       <br />
@@ -48,8 +49,9 @@ const MainPage = () => (
         allowFullScreen
       ></iframe>
       <section>
-        <p>A 3D Collectathon Platformer with Score Attack elements!</p>
+        <h1>Robots & Things</h1>
         <p>
+          A 3D Collectathon Platformer with Score Attack elements! <br /><br />
           Chain moves to get more points as you bounce off enemies, and use your
           combined level high scores to progress further into the game!
         </p>

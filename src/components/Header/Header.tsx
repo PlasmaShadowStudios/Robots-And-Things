@@ -11,6 +11,10 @@ import Link from "next/link";
 const headerLinks = ["/", "/updates", "/demo", "/screenshots", "/videos"];
 const headerNames = ["About", "Updates", "Demo", "Screenshots", "Videos"];
 
+//<a href="https://www.patreon.com/PlasmaShadow">Patreon</a>
+//<a href="https://discord.gg/F6yUj3xV2P">Discord</a>
+
+
 interface Props {
   currentPage?: string;
 }
@@ -46,7 +50,8 @@ const Header = ({ currentPage = "" }: Props) => {
             );
           }}
           className={styles.logo}
-          alt="Robots & Things"
+          alt="Logo"
+          title="Robots & Things Logo"
         />
         <div className={showLinkMenu ? styles.links : styles.hideLinks}>
           {headerLinks.map((headerLink, index) => (

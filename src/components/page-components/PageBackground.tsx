@@ -20,6 +20,7 @@ const PageBackground = ({ imagesToShow = [0, 1, 2, 3] }: Props) => {
           src={images[imageIndexToShow]}
           alt="background"
           key={imageIndexToShow}
+          title={`bg${imageIndexToShow}`}
         />
       ))}
     </div>

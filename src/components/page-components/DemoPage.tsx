@@ -16,7 +16,8 @@ const DemoPage = () => (
         src={Thumbnail}
         quality={100}
         className={styles.screenshot}
-        alt="Robots & Things"
+        alt="Robots & Things Thumbnail"
+        title="Robots & Things"
       />
       <h1>Demo</h1>
 
