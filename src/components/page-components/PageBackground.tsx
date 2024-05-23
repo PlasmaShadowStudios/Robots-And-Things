@@ -8,7 +8,7 @@ import styles from "./Page.module.scss";
 interface Props {
   imagesToShow?: number[];
 }
-const PageBackground = ({ imagesToShow = [0, 1, 2, 3] }: Props) => {
+const PageBackground = ({ imagesToShow = [0, 1, 2, 0] }: Props) => {
   // Enter imagesToShow prop like [0, 1, 2] to show the appropriate background in this array
   const images: StaticImageData[] = [bg, bg2, bg3, bg4];
 
