@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Header from "../Header/Header";
 import styles from "./Page.module.scss";
 import PageBackground from "./PageBackground";
+import EmbeddedContent from "@/EmbeddedContent/EmbeddedContent";
 interface Props {
   updateMessages: any[];
 }
@@ -33,20 +34,7 @@ export default function UpdatesPage({ updateMessages }: Props) {
                     <i>{msg.timestamp.split("T")[0]}</i>
                     <br />
                     {msg.embeds.map((embed: any) => (
-                      <>
-                        {embed.type === "video" && (
-                          <iframe
-                            width="560"
-                            height="315"
-                            src={`https://www.youtube.com/embed/${msg.embedId}`}
-                            title="YouTube video player"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerPolicy="strict-origin-when-cross-origin"
-                            allowFullScreen
-                          />
-                        )}
-                        {msg.embedId}
-                      </>
+                      <EmbeddedContent key={msg.embedId} type={embed.type} id={msg.embedId} />
                     ))}
                     <br />
                     {msg.content}

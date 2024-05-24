@@ -28,9 +28,9 @@ export function removeEmojiSymbolsAndPings(msg: string) {
 
 export function findYoutubeUrlId(url: string) {
   // Get an Id like https://youtu.be/ZuJUEl0u6fY
-  if (url.includes("https://youtube.com/watch?v=")) {
-    const stringWithId = url.split("https://youtube.com/watch?v=")[1];
-    console.log("*id:", stringWithId);
-    return stringWithId;
+  if (url.includes("https://www.youtube.com/watch?v=")) {
+    const splitString = url.split("v=");
+
+    return splitString[1];
   }
 }
