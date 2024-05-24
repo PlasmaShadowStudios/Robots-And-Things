@@ -7,7 +7,7 @@ export default function Screenshots() {
     <>
       <Header currentPage="Screenshots" />
       <UnderConstruction />
-      <PageBackground />
+      <PageBackground imagesToShow={[0, 1, 2, 3]} />
     </>
   );
 }

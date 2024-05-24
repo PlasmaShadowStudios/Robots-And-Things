@@ -6,7 +6,7 @@ const VideosPage = () => (
   <>
     <Header currentPage="Videos" />
     <div className={styles.pageContainer}>
-      <PageBackground imagesToShow={[0, 0, 0]} />
+      <PageBackground />
 
       <h1>May 2021 Kickstarter Trailer</h1>
       <iframe

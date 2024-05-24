@@ -1,19 +1,17 @@
 "use client";
 import styles from "./Header.module.scss";
 import GameLogo from "../../images/Robots & Things Logo.png";
+import DiscordIcon from "../../images/icons/discord.png";
+import YoutubeIcon from "../../images/icons/youtube.png";
 import Image from "next/image";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import PrimaryButton from "../Button/Button";
 import useIsMobile from "../../services/useIsMobile";
 import Link from "next/link";
 
 const headerLinks = ["/", "/updates", "/demo", "/screenshots", "/videos"];
 const headerNames = ["About", "Updates", "Demo", "Screenshots", "Videos"];
-
-//<a href="https://www.patreon.com/PlasmaShadow">Patreon</a>
-//<a href="https://discord.gg/F6yUj3xV2P">Discord</a>
-
 
 interface Props {
   currentPage?: string;
@@ -46,7 +44,11 @@ const Header = ({ currentPage = "" }: Props) => {
           onClick={() => {
             //window.location.replace(`${process.env.NEXT_PUBLIC_BASE_URL}`);
             window.location.replace(
-              `${isInDevMode ? "localhost:3000" : "https://plasmashadowstudios.github.io/Robots-And-Things"}`
+              `${
+                isInDevMode
+                  ? "localhost:3000"
+                  : "https://plasmashadowstudios.github.io/Robots-And-Things"
+              }`
             );
           }}
           className={styles.logo}
@@ -67,6 +69,12 @@ const Header = ({ currentPage = "" }: Props) => {
               {headerNames[index]}
             </Link>
           ))}
+          <Link href={"https://discord.gg/F6yUj3xV2P"} target="_blank">
+            <Image src={DiscordIcon} width={32} title="Discord" alt="Discord" />
+          </Link>
+          <Link href={"https://www.youtube.com/@robotsthings6736"} target="_blank">
+            <Image src={YoutubeIcon} width={32} title="YouTube" alt="YouTube" />
+          </Link>
         </div>
         {!showLinkMenu && (
           <div className={styles.links}>

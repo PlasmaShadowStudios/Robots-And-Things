@@ -23,9 +23,11 @@ import {
   GroupColour,
 } from "../GameMechanic/GroupedMechanics";
 import PageBackground from "./PageBackground";
+import HeaderForSEO from "../Header/HeaderForSEO";
 
 const MainPage = () => (
   <>
+    <HeaderForSEO />
     <Header currentPage="About" />
     <div className={styles.pageContainer}>
       <Image
@@ -43,15 +45,15 @@ const MainPage = () => (
         height="315"
         src="https://www.youtube.com/embed/pucektir9Qo?si=jek7wPv-e3-8XGWx"
         title="YouTube video player"
-        frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerPolicy="strict-origin-when-cross-origin"
         allowFullScreen
       ></iframe>
       <section>
-        <h1>Robots & Things</h1>
+        <h1 className={styles.gameTitle}>Robots & Things</h1>
         <p>
-          A 3D Collectathon Platformer with Score Attack elements! <br /><br />
+          A 3D Collectathon Platformer with Score Attack elements! <br />
+          <br />
           Chain moves to get more points as you bounce off enemies, and use your
           combined level high scores to progress further into the game!
         </p>
