@@ -26,10 +26,14 @@ export function removeEmojiSymbolsAndPings(msg: string) {
   return msg;
 }
 
-export function findYoutubeUrlId(url: string) {
-  // Get an Id like https://youtu.be/ZuJUEl0u6fY
+// Get an Id from a url like https://youtu.be/ZuJUEl0u6fY would return ZuJUEl0u6fY
+export function findEmbeddedUrlId(url: string) {
   if (url.includes("https://www.youtube.com/watch?v=")) {
     const splitString = url.split("v=");
+
+    return splitString[1];
+  } else if (url.includes("https://giphy.com/gifs/")) {
+    const splitString = url.split("gifs/");
 
     return splitString[1];
   }

@@ -1,6 +1,6 @@
 import UpdatesPage from "@/components/page-components/UpdatesPage";
 import {
-  findYoutubeUrlId,
+  findEmbeddedUrlId,
   isValidMessage,
   removeEmojiSymbolsAndPings,
 } from "../../services/formatUpdateMessage";
@@ -37,14 +37,12 @@ export default async function Updates() {
     updates.forEach((msg: any) => {
       if (isValidMessage(msg.content)) {
         msg.content = removeEmojiSymbolsAndPings(msg.content);
-        console.log(msg.embeds.length);
-        if (msg.embeds.length > 0 && msg.embeds[0].type === "video") {
-          const youtubeUrlId = findYoutubeUrlId(msg.embeds[0].url);
-          msg.embedId = youtubeUrlId;
-
-          if (msg.embedId) {
-            console.log("id:", msg.embedId);
-          }
+        if (
+          msg.embeds.length > 0 &&
+          (msg.embeds[0].type === "video" || msg.embeds[0].type === "gifv")
+        ) {
+          const embeddedId = findEmbeddedUrlId(msg.embeds[0].url);
+          msg.embedId = embeddedId;
         }
       } else {
         msg.content = "";

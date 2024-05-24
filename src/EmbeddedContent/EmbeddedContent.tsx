@@ -6,7 +6,7 @@ interface Props {
   id: string;
 }
 
-const EmbeddedContent: FC<Props> = ({type, id}:Props) => (
+const EmbeddedContent: FC<Props> = ({ type, id }: Props) => (
   <div className={styles.EmbeddedContent} data-testid="EmbeddedContent">
     {type === "video" && (
       <iframe
@@ -19,7 +19,16 @@ const EmbeddedContent: FC<Props> = ({type, id}:Props) => (
         allowFullScreen
       />
     )}
-    <br/>
+    {type === "gifv" && (
+      <iframe
+        src={`https://giphy.com/embed/${id}`}
+        width="480"
+        height="360"
+        className="giphy-embed"
+        allowFullScreen
+      />
+    )}
+    <br />
   </div>
 );
 
