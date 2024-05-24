@@ -6,14 +6,14 @@ import EmbeddedContent from "@/EmbeddedContent/EmbeddedContent";
 interface Props {
   updateMessages: any[];
 }
-//<iframe src="https://giphy.com/embed/mTmms2xesjpIVOwzWK" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/mTmms2xesjpIVOwzWK">via GIPHY</a></p>
 
+//Updates get modified in app/updates/page.tsx
 export default function UpdatesPage({ updateMessages }: Props) {
   return (
     <>
       <Header currentPage="Updates" />
       <div className={styles.pageContainer}>
-        <PageBackground imagesToShow={[3, 3, 3, 3, 3, 3, 3]} />
+        <PageBackground imagesToShow={[3, 3, 3, 3, 3, 3, 3, 3]} />
 
         <h1>Updates</h1>
         {updateMessages ? (
@@ -30,15 +30,28 @@ export default function UpdatesPage({ updateMessages }: Props) {
             {updateMessages.map((msg, index) => (
               <>
                 {msg.content && (
-                  <section key={msg + index}>
-                    <i>{msg.timestamp.split("T")[0]}</i>
-                    <br />
-                    {msg.embeds.map((embed: any) => (
-                      <EmbeddedContent key={msg.embedId} type={embed.type} id={msg.embedId} />
-                    ))}
-                    <br />
-                    {msg.content}
-                  </section>
+                  <>
+                    <section
+                      key={msg + index}
+                      style={{
+                        borderTop: msg.startOfDay ? '2px solid white' : 0,
+                        borderBottom: msg.endOfDay ? '2px solid white' : 0,
+                      }}
+                    >
+                      {msg.startOfDay && <i>{msg.timestamp.split("T")[0]}</i>}
+                      <br />
+                      {msg.embeds.map((embed: any) => (
+                        <EmbeddedContent
+                          key={msg.embedId}
+                          type={embed.type}
+                          id={msg.embedId}
+                        />
+                      ))}
+                      <br />
+                      {msg.content}
+                    </section>
+                    {msg.endOfDay && <div style={{ marginBottom: 64 }} />}
+                  </>
                 )}
               </>
             ))}

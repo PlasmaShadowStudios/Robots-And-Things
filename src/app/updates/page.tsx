@@ -2,6 +2,7 @@ import UpdatesPage from "@/components/page-components/UpdatesPage";
 import {
   findEmbeddedUrlId,
   isValidMessage,
+  makeSameDayUpdatesShowEarlierTimesFirst,
   removeEmojiSymbolsAndPings,
 } from "../../services/formatUpdateMessage";
 
@@ -30,7 +31,7 @@ async function getUpdates() {
 }
 
 export default async function Updates() {
-  const updates = await getUpdates();
+  let updates = await getUpdates();
 
   if (updates) {
     //Format messages to not show emojis, hide pointless small update messages, and show videos/images properly
@@ -48,6 +49,8 @@ export default async function Updates() {
         msg.content = "";
       }
     });
+
+    updates = makeSameDayUpdatesShowEarlierTimesFirst(updates);
   }
 
   return (

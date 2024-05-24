@@ -38,3 +38,34 @@ export function findEmbeddedUrlId(url: string) {
     return splitString[1];
   }
 }
+
+//Make earlier times appear first if posted on the same day
+export function makeSameDayUpdatesShowEarlierTimesFirst(messages: any[]) {
+  let currentDay: string;
+  let messagesFromCurrentDay: any[] = [];
+  let finalArray: any[] = [];
+
+  messages.forEach((msg, index) => {
+    const splitTimeString = msg.timestamp.split("T");
+    if (splitTimeString && splitTimeString.length > 0) {
+      //Check if the day has changed
+      if (currentDay !== splitTimeString[0]) {
+        //Add on everything in this day to the return array, but reversed. This should sort it properly.
+        if (messagesFromCurrentDay.length > 0) {
+          messagesFromCurrentDay[0].endOfDay = true;
+          messagesFromCurrentDay[messagesFromCurrentDay.length-1].startOfDay = true;
+        }
+        finalArray = finalArray.concat(messagesFromCurrentDay.reverse());
+
+        //New day. New array.
+        currentDay = splitTimeString[0];
+        messagesFromCurrentDay = [msg];
+      } else {
+        //If update is on the same day add it to an array for the current day.
+        messagesFromCurrentDay.push(msg);
+      }
+    }
+  });
+
+  return finalArray;
+}
