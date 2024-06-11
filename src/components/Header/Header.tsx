@@ -43,13 +43,15 @@ const Header = ({ currentPage = "" }: Props) => {
           src={GameLogo}
           onClick={() => {
             //window.location.replace(`${process.env.NEXT_PUBLIC_BASE_URL}`);
-            window.location.replace(
-              `${
-                isInDevMode
-                  ? "localhost:3000"
-                  : "https://plasmashadowstudios.github.io/Robots-And-Things"
-              }`
-            );
+            if (currentPage !== "About") {
+              window.location.replace(
+                `${
+                  isInDevMode
+                    ? "localhost:3000"
+                    : "https://plasmashadowstudios.github.io/Robots-And-Things"
+                }`
+              );
+            }
           }}
           className={styles.logo}
           alt="Logo"
@@ -72,7 +74,10 @@ const Header = ({ currentPage = "" }: Props) => {
           <Link href={"https://discord.gg/F6yUj3xV2P"} target="_blank">
             <Image src={DiscordIcon} width={32} title="Discord" alt="Discord" />
           </Link>
-          <Link href={"https://www.youtube.com/@robotsthings6736"} target="_blank">
+          <Link
+            href={"https://www.youtube.com/@robotsthings6736"}
+            target="_blank"
+          >
             <Image src={YoutubeIcon} width={32} title="YouTube" alt="YouTube" />
           </Link>
         </div>

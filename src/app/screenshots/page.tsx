@@ -1,13 +1,5 @@
-import Header from "@/components/Header/Header";
-import PageBackground from "@/components/page-components/PageBackground";
-import UnderConstruction from "@/components/page-components/UnderConstruction";
+import ScreenshotsPage from "@/components/page-components/ScreenshotsPage";
 
 export default function Screenshots() {
-  return (
-    <>
-      <Header currentPage="Screenshots" />
-      <UnderConstruction />
-      <PageBackground imagesToShow={[0, 1, 2, 3]} />
-    </>
-  );
+  return <ScreenshotsPage />;
 }

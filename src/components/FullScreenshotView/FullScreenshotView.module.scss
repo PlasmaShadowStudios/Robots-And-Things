@@ -1,0 +1,14 @@
+.FullScreenshotView {
+  position: sticky;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    text-align: center;
+  }
+
+  img:hover {
+    transform: scale(1.0) !important;
+  }
+}
