@@ -5,7 +5,7 @@ import "./globals.scss";
 // const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Robots And Things - By Plasma Shadow Studios",
+  title: "Robots And Things - Game By Plasma Shadow Studios",
   description:
     "Robots And Things - A 3D platformer with collectathon and score attack elements, made by Plasma Shadow Studios",
 };
