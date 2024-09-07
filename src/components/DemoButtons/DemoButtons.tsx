@@ -15,9 +15,9 @@ export default function DemoButtons() {
       }
     />
     <PrimaryButton
-      text={"Coming Soon? 2024 Demo"}
+      text={"Future demos may be posted later!"}
       variant={"outlined"}
-      onClick={() => {}} //window.location.replace("")}
+      onClick={() => {}}
     />
   </div>
   );
