@@ -20,11 +20,11 @@ const VideosPage = () => (
         allowFullScreen
       ></iframe>
 
-      <h1>December 2020 Trailer</h1>
+      <h1>November 2024 Level Editor Footage</h1>
       <iframe
         width="560"
         height="315"
-        src="https://www.youtube.com/embed/VY4uQ4FOgcs"
+        src="https://www.youtube.com/embed/0cDM0lh8T3M"
         title="YouTube video player"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -49,6 +49,18 @@ const VideosPage = () => (
         width="560"
         height="315"
         src="https://www.youtube.com/embed/0XfvFZ90Tkw"
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen
+      ></iframe>
+
+      <h1>December 2020 Trailer</h1>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/VY4uQ4FOgcs"
         title="YouTube video player"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
