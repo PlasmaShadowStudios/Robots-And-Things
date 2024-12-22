@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Header from "../Header/Header";
 import styles from "./Page.module.scss";
 import PageBackground from "./PageBackground";
@@ -13,7 +13,7 @@ export default function UpdatesPage({ updateMessages }: Props) {
     <>
       <Header currentPage="Updates" />
       <div className={styles.pageContainer}>
-        <PageBackground imagesToShow={[3, 3, 3, 3, 3, 3, 3, 3]} />
+        <PageBackground imagesToShow={[3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]} />
 
         <h1>Updates</h1>
         {updateMessages ? (

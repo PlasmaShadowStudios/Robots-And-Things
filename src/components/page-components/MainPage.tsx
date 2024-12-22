@@ -49,15 +49,35 @@ const MainPage = () => (
         referrerPolicy="strict-origin-when-cross-origin"
         allowFullScreen
       ></iframe>
-      <section>
-        <h1 className={styles.gameTitle}>Robots & Things</h1>
+      <GroupedMechanics
+        heading="Robots & Things"
+        isGameTitle
+        color={GroupColour.BRIGHT_GREEN}
+      >
         <p>
           A 3D Collectathon Platformer with Score Attack elements! <br />
           <br />
           Chain moves to get more points as you bounce off enemies, and use your
-          combined level high scores to progress further into the game!
+          combined level high scores to progress further into the game! <br />
+          <br />
+          Think you can you beat your rival, the Circlebot&apos;s high score?
         </p>
-      </section>
+      </GroupedMechanics>
+      <GroupedMechanics
+        heading="Robots & Things: Collectathon Creator"
+        isGameTitle
+        color={GroupColour.PURPLE}
+      >
+        <p>
+          A side game is in development that includes a level editor! (Find out
+          more in the Updates page.)
+          <br />
+          <br />
+          Build your own worlds and play other&apos;s levels in the Collectathon
+          Creator, or explore the Simulation Lab in a wacky story mode!
+          <br />
+        </p>
+      </GroupedMechanics>
       <GroupedMechanics heading="Main Collectables" color={GroupColour.BLUE}>
         <GameMechanic
           src={PuzzlePiece}
