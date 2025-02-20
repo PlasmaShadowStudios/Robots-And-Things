@@ -5,13 +5,17 @@ import Thumbnail from "../../images/500x500_Thumbnail.png";
 import Header from "../Header/Header";
 import styles from "./Page.module.scss";
 import DemoButtons from "../DemoButtons/DemoButtons";
-import PageBackground from "./PageBackground";
+import PageBackground, { BackgroundImages } from "./PageBackground";
 
 const DemoPage = () => (
   <>
     <Header currentPage="Demo" />
     <div className={styles.pageContainer}>
-      <PageBackground imagesToShow={[3, 3]} />
+      <PageBackground
+        imagesToShow={[
+          BackgroundImages.GENERAL_BACKGROUND,
+        ]}
+      />
       <Image
         src={Thumbnail}
         quality={100}

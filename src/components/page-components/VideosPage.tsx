@@ -1,12 +1,20 @@
 import Header from "../Header/Header";
 import styles from "./Page.module.scss";
-import PageBackground from "./PageBackground";
+import PageBackground, { BackgroundImages } from "./PageBackground";
 
 const VideosPage = () => (
   <>
     <Header currentPage="Videos" />
     <div className={styles.pageContainer}>
-      <PageBackground />
+      <PageBackground
+        imagesToShow={[
+          BackgroundImages.DEMO_ISLANDS,
+          BackgroundImages.AUTUMN_ABYSS,
+          BackgroundImages.SAND_CASTLE,
+          BackgroundImages.DEMO_ISLANDS,
+        ]}
+        showBorder
+      />
 
       <h1>May 2021 Kickstarter Trailer</h1>
       <iframe

@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../Header/Header";
 import styles from "./Page.module.scss";
-import PageBackground from "./PageBackground";
+import PageBackground, { BackgroundImages } from "./PageBackground";
 import EmbeddedContent from "@/EmbeddedContent/EmbeddedContent";
 interface Props {
   updateMessages: any[];
@@ -13,7 +13,16 @@ export default function UpdatesPage({ updateMessages }: Props) {
     <>
       <Header currentPage="Updates" />
       <div className={styles.pageContainer}>
-        <PageBackground imagesToShow={[3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]} />
+        <PageBackground
+          imagesToShow={[
+            BackgroundImages.GENERAL_BACKGROUND,
+            BackgroundImages.GENERAL_BACKGROUND,
+            BackgroundImages.GENERAL_BACKGROUND,
+            BackgroundImages.GENERAL_BACKGROUND,
+            BackgroundImages.GENERAL_BACKGROUND,
+            BackgroundImages.GENERAL_BACKGROUND,
+          ]}
+        />
 
         <h1>Updates</h1>
         {updateMessages ? (
@@ -34,8 +43,8 @@ export default function UpdatesPage({ updateMessages }: Props) {
                     <section
                       key={msg + index}
                       style={{
-                        borderTop: msg.startOfDay ? '2px solid white' : 0,
-                        borderBottom: msg.endOfDay ? '2px solid white' : 0,
+                        borderTop: msg.startOfDay ? "2px solid white" : 0,
+                        borderBottom: msg.endOfDay ? "2px solid white" : 0,
                       }}
                     >
                       {msg.startOfDay && <i>{msg.timestamp.split("T")[0]}</i>}

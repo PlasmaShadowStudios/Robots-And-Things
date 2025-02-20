@@ -22,7 +22,7 @@ import {
   GroupedMechanics,
   GroupColour,
 } from "../GameMechanic/GroupedMechanics";
-import PageBackground from "./PageBackground";
+import PageBackground, { BackgroundImages } from "./PageBackground";
 import HeaderForSEO from "../Header/HeaderForSEO";
 
 const MainPage = () => (
@@ -37,7 +37,15 @@ const MainPage = () => (
         quality={100}
         title="Robots & Things Logo"
       />
-      <PageBackground />
+      <PageBackground
+        imagesToShow={[
+          BackgroundImages.DEMO_ISLANDS,
+          BackgroundImages.AUTUMN_ABYSS,
+          BackgroundImages.SAND_CASTLE,
+          BackgroundImages.DEMO_ISLANDS,
+        ]}
+        showBorder
+      />
       <br />
 
       <iframe
@@ -69,7 +77,7 @@ const MainPage = () => (
         color={GroupColour.PURPLE}
       >
         <p>
-          A side game is in development that includes a level editor! (Find out
+          A side mode with a level editor is in development! (Find out
           more in the Updates page.)
           <br />
           <br />

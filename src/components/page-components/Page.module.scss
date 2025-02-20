@@ -9,9 +9,7 @@
   }
   padding-bottom: 1rem;
 
-
-
-  .gameTitle{
+  .gameTitle {
     margin-top: 4px !important;
   }
 
@@ -30,12 +28,16 @@
     filter: brightness(0.5);
   }
   .bgImg {
+    animation: none;
     width: 100%;
+  }
+
+  .bgImgBorder {
+    width: 99.9%;
     height: 100%;
     border: 1px solid rgb(181, 200, 255);
     animation: none;
   }
-
   .imagePreview {
     width: 20%;
     height: 20%;
@@ -48,7 +50,7 @@
     color: aqua;
   }
 
-  .inlineLink:hover{
+  .inlineLink:hover {
     color: rgb(3, 146, 146);
   }
 
