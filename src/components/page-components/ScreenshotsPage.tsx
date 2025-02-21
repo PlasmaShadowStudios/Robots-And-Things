@@ -1,5 +1,10 @@
 "use client";
 import React, { useState } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { Box, OrbitControls } from "@react-three/drei";
+import { useLoader } from "@react-three/fiber";
+import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
+
 import Header from "../Header/Header";
 import styles from "./Page.module.scss";
 import Image, { StaticImageData } from "next/image";
@@ -46,6 +51,8 @@ export default function ScreenshotsPage() {
   const [widthPercentage, setWidthPercentage] = useState<number>(100);
   const [title, setTitle] = useState<string>("");
 
+  const BlockbotFBX = useLoader(FBXLoader, "./models/Blockbot.fbx");
+
   return (
     <>
       <Header currentPage="Screenshots" />
@@ -76,6 +83,20 @@ export default function ScreenshotsPage() {
               }}
             />
           ))}
+        </section>
+
+        <section>
+          <Canvas>
+            <OrbitControls />
+            <ambientLight />
+            <pointLight position={[0, 1, 0]} />
+            <primitive
+              object={BlockbotFBX}
+              position={[0, -1, 0]}
+              scale={[0.01, 0.01, 0.01]}
+              rotation={[Math.PI / -2, 0, 0]}
+            />
+          </Canvas>
         </section>
       </div>
     </>
