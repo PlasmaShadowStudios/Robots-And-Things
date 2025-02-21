@@ -1,8 +1,8 @@
 import Image, { StaticImageData } from "next/image";
-import bg from "../../images/screenshots/DemoIslands_1.png";
-import bg2 from "../../images/screenshots/Autumn Abyss Top Down.png";
-import bg3 from "../../images/screenshots/Sand Castle Top Down.png";
-import bg4 from "../../images/screenshots/Robots And Things Background.png";
+import DemoIslands from "../../images/screenshots/DemoIslands_1.png";
+import AutumnAbyssTopDown from "../../images/screenshots/Autumn Abyss Top Down.png";
+import SandCastleTopDown from "../../images/screenshots/Sand Castle Top Down.png";
+import PowerupBackground from "../../images/screenshots/Powerup Background.png";
 import styles from "./Page.module.scss";
 
 interface Props {
@@ -19,7 +19,7 @@ export enum BackgroundImages {
 
 const PageBackground = ({ imagesToShow = [0, 1, 2, 0], showBorder }: Props) => {
   // Enter imagesToShow prop like [0, 1, 2] to show the appropriate background in this array
-  const images: StaticImageData[] = [bg, bg2, bg3, bg4];
+  const images: StaticImageData[] = [DemoIslands, AutumnAbyssTopDown, SandCastleTopDown, PowerupBackground];
 
   return (
     <div className={styles.bg}>
