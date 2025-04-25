@@ -3,8 +3,7 @@ import Header from "../Header/Header";
 import styles from "./Page.module.scss";
 import PageBackground, { BackgroundImages } from "./PageBackground";
 import EmbeddedContent from "@/EmbeddedContent/EmbeddedContent";
-import DevMap from "../Devmap/DevMap";
-import DevMapContainer from "../Devmap/DevMapContainer";
+import DevMapContainer from "../DevMap/DevMapContainer/DevMapContainer";
 interface Props {
   updateMessages: any[];
 }
