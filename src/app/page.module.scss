@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400&display=swap');
+@import "./variables.scss";
 
 
 .screenshot {
@@ -18,7 +19,7 @@ body{ /*All text*/
 
 header{
 
-   background-color: rgb(5 206 120);
+   background-color: $bright-green;
    padding: 0 15rem;
    display: flex;
 }
@@ -93,7 +94,7 @@ section, iframe {
 
 iframe
 {
-  border: 2px solid rgb(5 206 120);
+  border: 2px solid $bright-green;
   padding: 0;
 }
 
@@ -109,12 +110,12 @@ img {
 
 //Material UI overrides
 .MuiButton-contained {
-  background-color: rgb(5 206 120) !important;
+  background-color: $bright-green !important;
 }
 
 .MuiButton-outlined{
-  color:rgb(5 206 120) !important;
-  border: 1px solid rgb(5 206 120) !important;;
+  color:$bright-green !important;
+  border: 1px solid $bright-green !important;;
 }
 
 //Animations --------------------------
@@ -180,7 +181,7 @@ a:hover {
 
 iframe
 {
-  border: 2px solid rgb(5 206 120);
+  border: 2px solid $bright-green;
   padding: 0;
 }
 
@@ -196,12 +197,12 @@ img {
 
 //Material UI overrides
 .MuiButton-contained {
-  background-color: rgb(5 206 120) !important;
+  background-color: $bright-green !important;
 }
 
 .MuiButton-outlined{
-  color:rgb(5 206 120) !important;
-  border: 1px solid rgb(5 206 120) !important;;
+  color:$bright-green !important;
+  border: 1px solid $bright-green !important;;
 }
 
 //Animations --------------------------

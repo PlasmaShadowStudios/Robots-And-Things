@@ -1,7 +1,9 @@
+@import '../../app/variables.scss';
+
 .appHeader {
 
   header {
-    background-color: rgb(5 206 120);
+    background-color: $bright-green;
     padding: 0 15rem;
     display: flex;
     font-family: "Josefin Sans", sans-serif;

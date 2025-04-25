@@ -1,0 +1,33 @@
+@import "../../app/variables.scss";
+
+.devMap {
+  outline: 1px dashed white;
+  border-radius: 8px;
+
+  max-width: 10rem;
+
+  .incomplete {
+    background: $red;
+    border-radius: 8px;
+  }
+
+  .complete {
+    background: $bright-green;
+    border-radius: 8px;
+  }
+
+  .workInProgress {
+    background: $yellow;
+    border-radius: 8px;
+  }
+
+  .version{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+}
