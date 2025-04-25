@@ -65,6 +65,10 @@
     margin: 0 20rem;
   }
 
+  .updateMessage {
+    line-height: 1.5;
+  }
+
   @media screen and (max-width: 640px) {
     ul {
       margin: 0 1rem;
@@ -72,6 +76,10 @@
 
     .screenshot {
       width: 100%;
+    }
+
+    .updateMessage {
+      overflow: scroll;
     }
   }
 }

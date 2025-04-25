@@ -4,6 +4,7 @@ import styles from "./Page.module.scss";
 import PageBackground, { BackgroundImages } from "./PageBackground";
 import EmbeddedContent from "@/EmbeddedContent/EmbeddedContent";
 import DevMapContainer from "../DevMap/DevMapContainer/DevMapContainer";
+
 interface Props {
   updateMessages: any[];
 }
@@ -62,7 +63,7 @@ export default function UpdatesPage({ updateMessages }: Props) {
                         />
                       ))}
                       <br />
-                      {msg.content}
+                      <p className={styles.updateMessage}>{msg.content}</p>
                     </section>
                     {msg.endOfDay && <div style={{ marginBottom: 64 }} />}
                   </>

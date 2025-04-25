@@ -1,9 +1,13 @@
-//Now public was usually a quick message indicating an older patreon post is now public
+/* Filter out these discord messages.
+Now public was usually a quick message indicating an older patreon post is now public. */
 export function isValidMessage(msg: string) {
   if (
     msg.includes("Now public") ||
     msg.includes("^ Public") ||
-    msg.includes("^ The above post should be visible to anyone now")
+    msg.includes("^ The above post should be visible to anyone now") ||
+    msg.includes("ayyy I recognize that electronic version of the title theme I did years ago. 🙌")
+
+
   ) {
     return false;
   }

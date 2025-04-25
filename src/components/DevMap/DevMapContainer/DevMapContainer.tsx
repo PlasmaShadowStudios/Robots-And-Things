@@ -8,8 +8,8 @@ function DevMapContainer() {
     {
       version: 0.4,
       completionStatus: 2,
-      mainFocusOfVersion: "Base Character Movement And Gameplay",
-      details: "The original 2021 demo.",
+      mainFocusOfVersion: "Base Gameplay",
+      details: "The original 2021 demo with all the base moves, levels, and collectables.",
     },
     {
       version: 0.5,
@@ -28,7 +28,7 @@ function DevMapContainer() {
     {
       version: 0.7,
       completionStatus: 2,
-      mainFocusOfVersion: "Score Attack Elements",
+      mainFocusOfVersion: "Score Elements",
       details:
         "Chain moves off enemies to score points. Use your points across levels to unlock boss levels and progress through the game.",
     },
@@ -38,7 +38,7 @@ function DevMapContainer() {
     {
       version: 0.8,
       completionStatus: 1,
-      mainFocusOfVersion: "Test New Mechanics",
+      mainFocusOfVersion: "Test & Balance New Mechanics",
       details: "Test how score mechanics and move progression feels.",
     },
     {
@@ -50,8 +50,8 @@ function DevMapContainer() {
     {
       version: 1.0,
       completionStatus: 0,
-      mainFocusOfVersion: "Steam Release",
-      details: "Main game complete!",
+      mainFocusOfVersion: "Release Game Onto Steam",
+      details: "The game is completed and released onto steam!",
     },
   ];
 
@@ -60,20 +60,20 @@ function DevMapContainer() {
       version: 1.5,
       completionStatus: 0,
       mainFocusOfVersion: "Overhauled Visuals",
-      details: "More detailed environments!",
+      details: "More detailed environments across levels and hub worlds!",
     },
     {
       version: 1.5,
       completionStatus: 0,
       mainFocusOfVersion: "Switch 2 Port",
-      details: "",
+      details: "If we can get the game released onto steam, and get dev kits, we could potentially port to the switch 2!",
     },
     {
       version: 2.0,
       completionStatus: 1,
       mainFocusOfVersion: "Level Editor",
       details:
-        "An editor to create your own levels and share them with others. This has been partially started but is very placeholdery and experimental so far.",
+        "Create and share levels! This has been partially started but is very placeholder-y and experimental so far.",
     },
   ];
 
