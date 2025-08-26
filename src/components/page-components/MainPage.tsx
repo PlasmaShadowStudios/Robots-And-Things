@@ -68,7 +68,22 @@ const MainPage = () => (
           Chain moves to get more points as you bounce off enemies, and use your
           combined level high scores to progress further into the game! <br />
           <br />
-          Think you can you beat your rival, the Circlebot&apos;s high score?
+          Think you can you beat the high score of your rival, the Circlebot?
+        </p>
+      </GroupedMechanics>
+      <GroupedMechanics
+        heading="Check Out The Demo & Updates Page"
+        isGameTitle
+        color={GroupColour.PURPLE}
+      >
+        <p>
+          Click the Demo link at the top to try the game out yourself!
+          <br />
+          <br />
+          Check out the updates page to see how development is going, and the
+          developer map to see what features are coming next! If you have
+          questions or feedback, join our discord by clicking the iconn on the
+          far right on the nav bar!
         </p>
       </GroupedMechanics>
       {/* <GroupedMechanics
@@ -90,7 +105,7 @@ const MainPage = () => (
         <GameMechanic
           src={PuzzlePiece}
           alt="Puzzle Piece"
-          text="Collect Puzzle Pieces to gain a ton of points and end a level! You can find them outside levels in HUB areas too!"
+          text="Collect Puzzle Pieces to gain a ton of points and score high in action levels! You can find them outside levels in hub areas to boost your total score as well!"
         />
         <GameMechanic
           src={Gear}
