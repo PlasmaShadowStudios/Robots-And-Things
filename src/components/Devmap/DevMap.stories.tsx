@@ -1,5 +1,5 @@
 /* eslint-disable */
-import DevMap from ".";
+import DevMap from "./index";
 
 export default {
   title: "DevMap",
