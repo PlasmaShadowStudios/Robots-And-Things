@@ -1,5 +1,5 @@
 import React from "react";
-import DevMap from "../DevMap";
+import DevMap from "../../DevMap/DevMap";
 import styles from "./DevMapContainer.module.scss";
 
 interface DevMapRowProps {
