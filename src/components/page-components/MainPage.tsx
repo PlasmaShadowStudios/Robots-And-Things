@@ -71,7 +71,7 @@ const MainPage = () => (
           Think you can you beat your rival, the Circlebot&apos;s high score?
         </p>
       </GroupedMechanics>
-      <GroupedMechanics
+      {/* <GroupedMechanics
         heading="Robots & Things: Collectathon Creator"
         isGameTitle
         color={GroupColour.PURPLE}
@@ -85,7 +85,7 @@ const MainPage = () => (
           Creator, or explore the Simulation Lab in a wacky story mode!
           <br />
         </p>
-      </GroupedMechanics>
+      </GroupedMechanics> */}
       <GroupedMechanics heading="Main Collectables" color={GroupColour.BLUE}>
         <GameMechanic
           src={PuzzlePiece}
