@@ -67,6 +67,7 @@
 
   .updateMessage {
     line-height: 1.5;
+    white-space: pre-line;
   }
 
   @media screen and (max-width: 640px) {

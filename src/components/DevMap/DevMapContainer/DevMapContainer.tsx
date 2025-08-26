@@ -9,7 +9,8 @@ function DevMapContainer() {
       version: 0.4,
       completionStatus: 2,
       mainFocusOfVersion: "Base Gameplay",
-      details: "The original 2021 demo with all the base moves, levels, and collectables.",
+      details:
+        "The original 2021 demo with all the base moves, levels, and collectables.",
     },
     {
       version: 0.5,
@@ -50,8 +51,8 @@ function DevMapContainer() {
     {
       version: 1.0,
       completionStatus: 0,
-      mainFocusOfVersion: "Release Game Onto Steam",
-      details: "The game is completed and released onto steam!",
+      mainFocusOfVersion: "Release Game Onto Itch.io",
+      details: "The game is completed and released onto Itch.io!",
     },
   ];
 
@@ -59,21 +60,30 @@ function DevMapContainer() {
     {
       version: 1.5,
       completionStatus: 0,
-      mainFocusOfVersion: "Overhauled Visuals",
-      details: "More detailed environments across levels and hub worlds!",
+      mainFocusOfVersion: "More Polish",
+      details:
+        "More detailed environments, achievements, and perhaps even new levels or expanded worlds!",
     },
     {
       version: 1.5,
       completionStatus: 0,
+      mainFocusOfVersion: "Steam Release",
+      details:
+        "The game is released onto Steam! This would have a more focused launch compared to v1.0.",
+    },
+    {
+      version: 1.8,
+      completionStatus: 0,
       mainFocusOfVersion: "Switch 2 Port",
-      details: "If we can get the game released onto steam, and get dev kits, we could potentially port to the switch 2!",
+      details:
+        "If we can get the game released onto steam, and get dev kits, we could potentially port to the switch 2!",
     },
     {
       version: 2.0,
       completionStatus: 1,
       mainFocusOfVersion: "Level Editor",
       details:
-        "Create and share levels! This has been partially started but is very placeholder-y and experimental so far.",
+        "Create and share levels! This has been partially started but is experimental so far.",
     },
   ];
 
@@ -87,7 +97,8 @@ function DevMapContainer() {
       <section>
         <h2>Future Milestones</h2>
         <p>
-          This is roughly what's left that's planned for the game's development.
+          This is roughly what&apos;s left that&apos;s planned for the
+          game&apos;s development.
           <br />
           <br />
           Current Version: v0.8
@@ -99,8 +110,8 @@ function DevMapContainer() {
       <section>
         <h2>Extra Milestones</h2>
         <p>
-          Free updates with extra content or releases to other platforms could
-          happen in the distant future.
+          After a beatable game is released, the game could get additional
+          content and more polish, and release onto major platforms.
         </p>
         <br />
         <DevMapRow items={extraMilestones} />

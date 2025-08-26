@@ -5,9 +5,9 @@ export function isValidMessage(msg: string) {
     msg.includes("Now public") ||
     msg.includes("^ Public") ||
     msg.includes("^ The above post should be visible to anyone now") ||
-    msg.includes("ayyy I recognize that electronic version of the title theme I did years ago. 🙌")
-
-
+    msg.includes(
+      "ayyy I recognize that electronic version of the title theme I did years ago. 🙌"
+    )
   ) {
     return false;
   }
@@ -28,6 +28,11 @@ export function removeEmojiSymbolsAndPings(msg: string) {
   msg = msg.replaceAll("<:Dunce:847197146142474251>", "");
 
   return msg;
+}
+
+export function addLineBreakAfterLink(msg: string) {
+  // Match all URLs starting with http or https
+  return msg.replace(/(https?:\/\/[^\s]+)/g, "$1\n");
 }
 
 // Get an Id from a url like https://youtu.be/ZuJUEl0u6fY would return ZuJUEl0u6fY
@@ -57,7 +62,8 @@ export function makeSameDayUpdatesShowEarlierTimesFirst(messages: any[]) {
         //Add on everything in this day to the return array, but reversed. This should sort it properly.
         if (messagesFromCurrentDay.length > 0) {
           messagesFromCurrentDay[0].endOfDay = true;
-          messagesFromCurrentDay[messagesFromCurrentDay.length-1].startOfDay = true;
+          messagesFromCurrentDay[messagesFromCurrentDay.length - 1].startOfDay =
+            true;
         }
         finalArray = finalArray.concat(messagesFromCurrentDay.reverse());
 

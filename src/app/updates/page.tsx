@@ -1,5 +1,6 @@
 import UpdatesPage from "@/components/page-components/UpdatesPage";
 import {
+  addLineBreakAfterLink,
   findEmbeddedUrlId,
   isValidMessage,
   makeSameDayUpdatesShowEarlierTimesFirst,
@@ -38,6 +39,7 @@ export default async function Updates() {
     updates.forEach((msg: any) => {
       if (isValidMessage(msg.content)) {
         msg.content = removeEmojiSymbolsAndPings(msg.content);
+        msg.content = addLineBreakAfterLink(msg.content);
         if (
           msg.embeds.length > 0 &&
           (msg.embeds[0].type === "video" || msg.embeds[0].type === "gifv")

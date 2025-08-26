@@ -25,8 +25,9 @@ function DevMap({
       {
         <div className={classNames[completionStatus || 0]}>
           <p className={styles.version}>
-            v{version}
-            <br /><br />
+            v{version.toFixed(1)}
+            <br />
+            <br />
             {mainFocusOfVersion}
           </p>
         </div>
