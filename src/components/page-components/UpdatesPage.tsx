@@ -3,7 +3,7 @@ import Header from "../Header/Header";
 import styles from "./Page.module.scss";
 import PageBackground, { BackgroundImages } from "./PageBackground";
 import EmbeddedContent from "@/EmbeddedContent/EmbeddedContent";
-import DevMapContainer from "../DevMap/DevMapContainer/DevMapContainer";
+import DevMapContainer from "../DevMap/DevMapContainer";
 
 interface Props {
   updateMessages: any[];
@@ -30,7 +30,7 @@ export default function UpdatesPage({ updateMessages }: Props) {
 
         <DevMapContainer />
 
-        <h2 style={{ color: "white", paddingTop:'10rem'}}>Updates</h2>
+        <h2 style={{ color: "white", paddingTop: "10rem" }}>Updates</h2>
         {updateMessages ? (
           <>
             <section>
