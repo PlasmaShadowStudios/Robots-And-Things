@@ -66,7 +66,7 @@ const MainPage = () => (
           A 3D Collectathon Platformer with Score Attack elements! <br />
           <br />
           Chain moves to get more points as you bounce off enemies, and use your
-          combined level high scores to progress further into the game! <br />
+          combined level high scores to unlock cool abilities! <br />
           <br />
           Think you can you beat the high score of your rival, the Circlebot?
         </p>
@@ -110,7 +110,7 @@ const MainPage = () => (
         <GameMechanic
           src={Gear}
           alt="Gear"
-          text="Collect Gears and trade them for a variety of abilities!"
+          text="Collect Gears and trade them for a variety of extra abilities to go along with your main moves."
         />
         <GameMechanic
           src={Medal}
@@ -136,7 +136,7 @@ const MainPage = () => (
         <GameMechanic
           src={ScoreTotal}
           alt="Score System"
-          text="Chain moves, bounce off enemies, speedrun levels, and find collectables to get tons of points! Your total score across all levels will be key to progressing."
+          text="Chain moves, bounce off enemies, speedrun levels, and find collectables to get tons of points! Your total score across all levels will be key to unlocking super helpful abilities."
         />
       </GroupedMechanics>
 
