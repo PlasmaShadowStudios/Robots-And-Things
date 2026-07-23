@@ -38,13 +38,13 @@ function DevMapContainer() {
   const futureMilestones = [
     {
       version: 0.8,
-      completionStatus: 1,
+      completionStatus: 2,
       mainFocusOfVersion: "Test & Balance New Mechanics",
       details: "Test how score mechanics and move progression feels.",
     },
     {
       version: 0.9,
-      completionStatus: 0,
+      completionStatus: 1,
       mainFocusOfVersion: "Level Design & Boss Polish",
       details: "Polish up the hub worlds, levels, and bosses.",
     },
@@ -101,7 +101,7 @@ function DevMapContainer() {
           game&apos;s development.
           <br />
           <br />
-          Current Version: v0.8
+          Current Version: v0.9
         </p>
         <br />
         <DevMapRow items={futureMilestones} />
