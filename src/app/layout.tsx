@@ -4,10 +4,15 @@ import "./globals.scss";
 
 // const inter = Inter({ subsets: ["latin"] });
 
+//This will go in the <head> of the page, and will be used for SEO and social media previews
 export const metadata: Metadata = {
-  title: "Robots And Things - Game By Plasma Shadow Studios",
+  title: "Robots And Things - Indie 3D Platformer Game",
   description:
     "Robots And Things - A 3D platformer with collectathon and score attack elements, made by Plasma Shadow Studios",
+  siteName: "Robots And Things",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
