@@ -10,6 +10,12 @@ export const metadata: Metadata = {
   description:
     "Robots And Things - A 3D platformer with collectathon and score attack elements, made by Plasma Shadow Studios",
   siteName: "Robots And Things",
+  openGraph: {
+    title: "Robots And Things",
+    description:
+      "A 3D platformer with collectathon and score attack elements, made by Plasma Shadow Studios",
+    type: "website",
+  },
   icons: {
     icon: "/favicon.ico",
   },
