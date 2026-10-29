@@ -24,6 +24,7 @@ import {
 } from "../GameMechanic/GroupedMechanics";
 import PageBackground, { BackgroundImages } from "./PageBackground";
 import HeaderForSEO from "../Header/HeaderForSEO";
+import Link from "next/link";
 
 const MainPage = () => (
   <>
@@ -72,18 +73,22 @@ const MainPage = () => (
         </p>
       </GroupedMechanics>
       <GroupedMechanics
-        heading="Check Out The Demo & Updates Page"
+        heading="Check Out The Demo & Full Game!"
         isGameTitle
         color={GroupColour.PURPLE}
       >
         <p>
-          Click the Demo link at the top to try the game out yourself!
+          You can play the demo for free on Itch.io! The full game is also
+          available for purchase there. For questions or feedback, join our
+          discord by clicking the icon on the far right on the nav bar.
           <br />
           <br />
-          Check out the updates page to see how development is going, and the
-          developer map to see what features are coming next! If you have
-          questions or feedback, join our discord by clicking the iconn on the
-          far right on the nav bar!
+          <Link
+            href="https://plasmashadowstudios.itch.io/robots-and-things"
+            className={`${styles.link} ${styles.inlineLink}`}
+          >
+            Get the game here!
+          </Link>
         </p>
       </GroupedMechanics>
       {/* <GroupedMechanics

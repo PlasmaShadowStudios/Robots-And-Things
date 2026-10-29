@@ -33,9 +33,6 @@ function DevMapContainer() {
       details:
         "Chain moves off enemies to score points. Use your points across levels to unlock boss levels and progress through the game.",
     },
-  ];
-
-  const futureMilestones = [
     {
       version: 0.8,
       completionStatus: 2,
@@ -44,13 +41,16 @@ function DevMapContainer() {
     },
     {
       version: 0.9,
-      completionStatus: 1,
+      completionStatus: 2,
       mainFocusOfVersion: "Level Design & Boss Polish",
       details: "Polish up the hub worlds, levels, and bosses.",
     },
+  ];
+
+  const futureMilestones = [
     {
       version: 1.0,
-      completionStatus: 0,
+      completionStatus: 1,
       mainFocusOfVersion: "Release Game Onto Itch.io",
       details: "The game is completed and released onto Itch.io!",
     },

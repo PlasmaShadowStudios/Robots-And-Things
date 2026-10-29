@@ -73,7 +73,7 @@ export default function UpdatesPage({ updateMessages }: Props) {
           </>
         ) : (
           <section>
-            <a href="https://discord.gg/Hu9TPDYR" style={{ color: "aqua" }}>
+            <a href="https://discord.gg/Hu9TPDYR" className={styles.inlineLink}>
               Check out our discord channel for updates!
             </a>
           </section>
