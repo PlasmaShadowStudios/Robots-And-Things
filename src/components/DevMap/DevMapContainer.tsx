@@ -45,14 +45,20 @@ function DevMapContainer() {
       mainFocusOfVersion: "Level Design & Boss Polish",
       details: "Polish up the hub worlds, levels, and bosses.",
     },
+    {
+      version: 1.0,
+      completionStatus: 2,
+      mainFocusOfVersion: "Release Game Onto Itch.io",
+      details: "The game is completed and released onto Itch.io!",
+    },
   ];
 
   const futureMilestones = [
     {
-      version: 1.0,
+      version: 0.0,
       completionStatus: 1,
-      mainFocusOfVersion: "Release Game Onto Itch.io",
-      details: "The game is completed and released onto Itch.io!",
+      mainFocusOfVersion: "None at this time",
+      details: "",
     },
   ];
 
@@ -94,24 +100,26 @@ function DevMapContainer() {
         <DevMapRow items={completedMilestones} />
       </section>
 
-      <section>
-        <h2>Future Milestones</h2>
-        <p>
-          This is roughly what&apos;s left that&apos;s planned for the
-          game&apos;s development.
+      {futureMilestones.length > 0 && futureMilestones[0].version > 0 && (
+        <section>
+          <h2>Future Milestones</h2>
+          <p>
+            This is roughly what&apos;s left that&apos;s planned for the
+            game&apos;s development.
+            <br />
+            <br />
+            Current Version: v1.0
+          </p>
           <br />
-          <br />
-          Current Version: v0.9
-        </p>
-        <br />
-        <DevMapRow items={futureMilestones} />
-      </section>
+          <DevMapRow items={futureMilestones} />
+        </section>
+      )}
 
       <section>
         <h2>Extra Milestones</h2>
         <p>
-          After a beatable game is released, the game could get additional
-          content and more polish, and release onto major platforms.
+          These are hypothetical additional
+          updates such as giving the game more content and releasing it onto major platforms.
         </p>
         <br />
         <DevMapRow items={extraMilestones} />
