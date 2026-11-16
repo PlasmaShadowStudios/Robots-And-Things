@@ -23,12 +23,12 @@ const PageBackground = ({ imagesToShow = [0, 1, 2, 0], showBorder }: Props) => {
 
   return (
     <div className={styles.bg}>
-      {imagesToShow.map((imageIndexToShow) => (
+      {imagesToShow.map((imageIndexToShow, index) => (
         <Image
           className={showBorder ? styles.bgImgBorder : styles.bgImg}
           src={images[imageIndexToShow]}
           alt="background"
-          key={imageIndexToShow}
+          key={`bg-${imageIndexToShow}-at-${index}`}
           title={`bg${imageIndexToShow}`}
         />
       ))}

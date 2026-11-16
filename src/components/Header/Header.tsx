@@ -5,7 +5,7 @@ import DiscordIcon from "../../images/icons/discord.png";
 import YoutubeIcon from "../../images/icons/youtube.png";
 import Image from "next/image";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PrimaryButton from "../Button/Button";
 import useIsMobile from "../../services/useIsMobile";
 import Link from "next/link";
@@ -19,13 +19,21 @@ interface Props {
 
 const Header = ({ currentPage = "" }: Props) => {
   // Hide link menu if not on mobile
-  const [showLinkMenu, setShowLinkMenu] = useState(
-    !useIsMobile(global.window && window.innerWidth)
+  const isMobile = useIsMobile(
+    typeof window !== "undefined" ? window.innerWidth : 0,
   );
+
+  // Initialize with a safe default for SSR
+  const [showLinkMenu, setShowLinkMenu] = useState(true);
+
+  // Update it safely once the component mounts on the client
+  useEffect(() => {
+    setShowLinkMenu(!isMobile);
+  }, [isMobile]);
 
   //Env variable not working, so try this for different links in production
   const [isInDevMode] = useState(
-    !!process && process.env.NODE_ENV === "development"
+    !!process && process.env.NODE_ENV === "development",
   );
 
   return (
@@ -49,7 +57,7 @@ const Header = ({ currentPage = "" }: Props) => {
                   isInDevMode
                     ? "localhost:3000"
                     : "https://plasmashadowstudios.github.io/Robots-And-Things"
-                }`
+                }`,
               );
             }
           }}
